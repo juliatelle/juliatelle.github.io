@@ -1,0 +1,30 @@
+* nav.css - Only styles the navigation bar */
+
+nav {
+  background-color: #f4f4f4;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  display: inline-block;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+nav ul li a:hover {
+  color: #663399;
+}
