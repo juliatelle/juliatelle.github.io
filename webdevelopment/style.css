@@ -1,17 +1,17 @@
 h1 {
   color: #0766AD;
   font-size: 36px;
-  font: Montserrat;
+  font-family: Sacremento, sans-serif;
 }
 
 h3 {
-    color: #29ADB2;
-    font-size: 24px;
-    font: Montserrat; 
+  color: #29ADB2;
+  font-size: 24px;
+  font-family: Montserrat, sans-serif;
 }
 
 p {
-  color:#040404;
+  color: #000000;
   font-size: 18px;
-  font: Roboto;
+  font-family: Roboto, sans-serif;
 }
