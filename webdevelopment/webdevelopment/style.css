@@ -1,0 +1,48 @@
+.hero {
+  background: url('images/hero-bg.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.hero-btn {
+  background-color: #C5E898;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #0766AD; 
+}
+
+h1 {
+  color: #0766AD;
+  font-size: 36px;
+  font-family: Sacremento, cursive;
+}
+
+h3 {
+  color: #29ADB2;
+  font-size: 24px;
+  font-family: Montserrat, sans-serif;
+}
+
+p {
+  color: black;
+  font-size: 18px;
+  font-family: Roboto, sans-serif;
+}
