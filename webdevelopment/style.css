@@ -59,10 +59,11 @@ ul {
   text-align: left;
   font-family: Roboto, sans-serif;
   list-style-type: circle;   
-  margin: 20px;
-  padding-left: 30px;
   color: #000;
   font-size: 25px;
+  padding-left: 0;
+  margin-left: 0;
+  list-style-position: outside;
 }
 
 
