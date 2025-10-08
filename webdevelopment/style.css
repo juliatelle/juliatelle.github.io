@@ -60,6 +60,7 @@ ul {
   font-family: Roboto, sans-serif;
   list-style-type: circle;   
   margin: 20px;
+  padding-left: 30px;
   color: #000;
   font-size: 25px;
 }
@@ -71,6 +72,5 @@ li {
   margin-bottom: 8px;
   color: #000;
   font-size: 20px; 
-  font-style: italic;
 }
 
