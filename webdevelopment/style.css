@@ -73,13 +73,16 @@ li {
 }
 
 .resume-link {
+  display: block; 
+  width: fit-content; 
   text-align: center;    
   padding: 10px 20px;        
-  margin: 15px 0;            
+  margin: 30px 0;            
   border: 2px solid #29ADB2 ;     
   background-color:  #C5E898;  
   color: #0766AD ;                   
   border-radius: 8px;         
-  font-weight: bold;          
+  font-weight: bold;  
+  font-family: Roboto, sans-serif;        
 }
 
