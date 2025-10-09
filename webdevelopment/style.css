@@ -60,7 +60,7 @@ ul {
   list-style-type: circle;   
   color: #000;
   font-size: 25px;
-  margin-left: 20px;
+  margin-left: 15px;
 }
 
 
@@ -70,5 +70,16 @@ li {
   margin-bottom: 8px;
   color: #000;
   font-size: 20px; 
+}
+
+.resume-link {
+  text-align: center;    
+  padding: 10px 20px;        
+  margin: 15px 0;            
+  border: 2px solid #29ADB2 ;     
+  background-color:  #C5E898;  
+  color: #0766AD ;                   
+  border-radius: 8px;         
+  font-weight: bold;          
 }
 
