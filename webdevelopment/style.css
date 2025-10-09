@@ -77,7 +77,7 @@ li {
   width: fit-content; 
   text-align: center;    
   padding: 10px 20px;        
-  margin: 30px 0;            
+  margin: 30px auto;            
   border: 2px solid #29ADB2 ;     
   background-color:  #C5E898;  
   color: #0766AD ;                   
