@@ -72,6 +72,10 @@ li {
   font-size: 20px; 
 }
 
+.resume-container {           
+  text-align: center;
+}
+
 .resume-link {
   display: block; 
   width: fit-content;
