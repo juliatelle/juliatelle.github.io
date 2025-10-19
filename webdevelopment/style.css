@@ -2,11 +2,22 @@ h1 {
   color: #0766AD;
   font-size: 36px;
   text-align: center;
-  font-family: Montserrat, sans-serif;
+  font-family: "Lexend", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h2 {
+  color:#29ADB2;
+  font-size: 36px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 h3 {
-  color: #29ADB2;
+  color: black;
   font-size: 24px;
   text-align: center;
   font-family: Roboto, sans-serif;
@@ -14,25 +25,77 @@ h3 {
 
 p {
   color: black;
-  font-size: 18px;
-  font-family: Roboto, sans-serif;
+  font-size: 24px;
+  font-family: "Lexend", sans-serif;
+  margin-bottom: 1em;
+}
+
+p:nth-of-type(2n) {
+  text-indent: 2em;      
+}
+
+p:first-of-type::first-letter {
+  font-size: 28px;        
+  color:black;        
+  font-weight: bold;         
+  margin-right: 4px;
+}
+
+blockquote {
+  color: rgb(7, 170, 7);
+  font-size: 24px;
+  text-align: center;
+  font-family:"Lexend", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+footer {
+color: black;
+  font-size: 16px;
+  font-family: "Lexend", sans-serif;
 }
 
 .hero {
-  background: url('hero.jpg.jpg') center/cover no-repeat; 
   color: white;
   text-align: center;
   padding: 100px 20px;
+}
+
+.index-hero {
+  background-image: url('hero.jpg.jpg');
+}
+
+.about-hero {
+  background-image: url('about.jpg.jpg')
+}
+
+.Resources-hero {
+  background-image: url('resources.jpg.jpg');
 }
 
 .hero h1 {
   font-size: 75px;
   margin-bottom: 15px;
   color: #0766AD; 
-  font-family: 'Sacramento', cursive;  
+  font-family: "Lexend", sans-serif;
+  font-weight: 400;
+  font-style: normal; 
+}
+
+.hero h2 {
+font-size: 50px;
+  margin-bottom: 15px;
+  color: #29AD; 
+  font-family: "Lexend", sans-serif;
+  font-weight: 300;
+  font-style: normal; 
 }
 
 .hero p {
+  font-family: "Lexend", sans-serif;
+  font-weight: 300;
+  font-style: normal; 
   font-size: 30px;
   margin-bottom: 10px;
   color: #29ADB2; 
