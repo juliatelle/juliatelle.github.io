@@ -164,3 +164,21 @@ li {
   border: 4px solid #29ADB2;
   border-radius: 20px;
 }
+
+@media print {
+  nav, .site-footer, .sidebar {
+    display: none;
+  }
+  body {
+    font-size: 12pt;
+    line-height: 1.3;
+  }
+   h1, p, ul, footer {
+    display: block;
+    color: black;
+    font-family: "Times New Roman", Georgia, serif;
+  }
+  footer img {
+    display: none;
+  }
+}
