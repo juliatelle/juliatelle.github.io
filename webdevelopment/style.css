@@ -240,6 +240,10 @@ li {
   font-family: Roboto, sans-serif;
 }
 
+textarea {
+  font-family: Roboto, sans-serif;  
+}
+
 label {
   display: block;
   margin-bottom: 10px;
@@ -257,6 +261,12 @@ textarea {
   box-sizing: border-box;
 }
 
+.role-buttons label {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: lighter;
+}
+
 input[type="submit"] {
   background-color: #C5E898;
   color: black;
@@ -271,3 +281,4 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #C5E898;
 }
+

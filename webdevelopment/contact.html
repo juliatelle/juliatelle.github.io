@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Index</title>
+  <title>Contact</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="nav.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,17 +25,17 @@
       </ul>
     </nav>
   </header>
-</body>
-</html>
 
-<body>
- <h1>Let's Connect!</h1>
- <form action="/mailinglist.php" method="POST">
- <fieldset>
- <legend>Join our email list</legend>
- <h3>Stay up to date on the latest EdTech trends and resources.</h3>
-    <ol>
-     <label for="title">Title:</label>
+ <main>
+  <h1>Let's Connect!</h1>
+  <form action="mailto:juliatelle97@gmail.com?Subject=Form%20Submission" method="post" enctype="text/plain">
+    <fieldset>
+    <legend>Join our email list</legend>
+    <h3>Stay up to date on the latest EdTech trends and resources.</h3>
+
+      <ol>
+        <li>
+          <label for="title">Title:</label>
           <select name="title" id="title" required>
             <option value="" disabled selected>Select your title</option>
             <option>Mr.</option>
@@ -46,30 +46,39 @@
           </select>
         </li>
 
-        <li><label for="firstlast"> First Name:</label>
-            <input type="text" name="firstname" id="firstname" required></li>
-        
-        <li><label for="lastlast"> Last Name:</label>
-            <input type="text" name="lastname" id="lastname" required></li>
+        <li>
+          <label for="firstname">First Name:</label>
+          <input type="text" name="firstname" id="firstname" required placeholder="Enter your first name">
+        </li>
 
-        <li><label for="email">Email:</label>
-            <input type="text" name="email" id="email" required></li>
+        <li>
+          <label for="lastname">Last Name:</label>
+          <input type="text" name="lastname" id="lastname" required placeholder="Enter your last name">
+        </li>
 
-        <li><label for="role"> Role:</label>
-        <select name="role" id="role" required>
-            <option value="" disabled selected>Select your role</option>
-            <option value="Educator"> Educator</option>
-            <option value="Instructional Coach"> Instructional Coach</option>
-            <option value="Administrator">Administrator</option>
-            <option value="EdTech Specliast"> EdTech Specialist</option>
-            <option value="Other"> Other (please specify in message)</option>
-        </select> </li>
-        
-        <li><label for="message">Message:</label>
-        <input type="text" name="message" id="message" required></li>
-    </ol>
-        <input type="submit" value="Submit">
- </fieldset>
- </form>
-</body>
-</html>
+        <li>
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" required placeholder="Please enter a valid email address (e.g: name@example.com)">
+        </li>
+
+        <li>
+         <label>Role:</label>
+          <div class="role-buttons">
+            <label><input type="radio" name="role" value="Educator" required> Educator</label>
+            <label><input type="radio" name="role" value="Instructional Coach"> Instructional Coach</label>
+            <label><input type="radio" name="role" value="Administrator"> Administrator</label>
+            <label><input type="radio" name="role" value="EdTech Specialist"> EdTech Specialist</label>
+            <label><input type="radio" name="role" value="Other"> Other</label>
+          </div>
+        </li>
+
+        <li>
+          <label for="message">Message:</label>
+          <textarea name="message" id="message" required placeholder="Write your message here"></textarea>
+        </li>
+      </ol>
+
+      <input type="submit" value="Submit">
+    </fieldset>
+  </form>
+</main>
