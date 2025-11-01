@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<header>
+  <img src="logo.jpg.jpg">
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="c.html">Content</a></li>
+      <li><a href="Resources.html">Resources</a></li>
+      <li><a href="contact.html">Connect</a></li>
+    </ul>
+  </nav>
+</header>
+
+<body>
+ <h1>Let's Connect!</h1>
+ <form action="/mailinglist.php" method="POST">
+ <fieldset>
+ <legend>Join our email list</legend>
+ <h3>Stay up to date on the latest EdTech trends and resources.</h3>
+    <ol>
+     <label for="title">Title:</label>
+          <select name="title" id="title" required>
+            <option value="" disabled selected>Select your title</option>
+            <option>Mr.</option>
+            <option>Ms.</option>
+            <option>Mrs.</option>
+            <option>Dr.</option>
+            <option>Prof.</option>
+          </select>
+        </li>
+
+        <li><label for="firstlast"> First Name:</label>
+            <input type="text" name="firstname" id="firstname" required></li>
+        
+        <li><label for="lastlast"> Last Name:</label>
+            <input type="text" name="lastname" id="lastname" required></li>
+
+        <li><label for="email">Email:</label>
+            <input type="text" name="email" id="email" required></li>
+
+        <li><label for="role"> Role:</label>
+        <select name="role" id="role" required>
+            <option value="" disabled selected>Select your role</option>
+            <option value="Educator"> Educator</option>
+            <option value="Instructional Coach"> Instructional Coach</option>
+            <option value="Administrator">Administrator</option>
+            <option value="EdTech Specliast"> EdTech Specialist</option>
+            <option value="Other"> Other (please specify in message)</option>
+        </select> </li>
+        
+        <li><label for="message">Message:</label>
+        <input type="text" name="message" id="message" required></li>
+    </ol>
+        <input type="submit" value="Submit">
+ </fieldset>
+ </form>
+</body>
+</html>
