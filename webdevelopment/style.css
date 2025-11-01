@@ -240,16 +240,18 @@ li {
   font-family: Roboto, sans-serif;
 }
 
-textarea {
-  font-family: Roboto, sans-serif;  
-}
-
 label {
   display: block;
   margin-bottom: 10px;
   font-weight: bold;
   font-family: Roboto, sans-serif;
   font-size: 18px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-family: Roboto, sans-serif;  
+  font-size: 16px;                              
 }
 
 input[type="text"],
