@@ -283,3 +283,69 @@ input[type="submit"]:hover {
   background-color: #C5E898;
 }
 
+.about-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bio {
+  grid-column: 1/ 2;
+  align-items: right;
+}
+
+.education {
+  grid-column: 1 / 2;
+}
+
+.media {
+  grid-column: 2 / 2;
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  margin-top: 60px; 
+}
+
+.profile-image {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.resume-video {
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.resume-link {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #0073e6;
+  color: white;
+  border-radius: 5px;
+  font-weight: 500;
+  grid-column: 1 / 2;
+}
+
+.resume-link:hover {
+  background-color: #005bb5;
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .media {
+    grid-column: 1 / 2;
+  }
+
+  .profile-image {
+    max-width: 250px;
+  }
+}
