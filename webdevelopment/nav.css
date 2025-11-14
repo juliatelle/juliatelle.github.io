@@ -41,11 +41,6 @@ header {
   color: #0766AD;
 }
 
-.hamburger {
-  font-size: 2rem;
-  cursor: pointer;
-  display: none; 
-}
 
 @media (max-width: 768px) {
 
