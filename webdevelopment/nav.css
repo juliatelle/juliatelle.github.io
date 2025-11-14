@@ -1,31 +1,34 @@
 header {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  background-color: #C5E898;  
+  justify-content: space-between; 
+  background-color: #C5E898;
   padding: 15px 30px;
   border-bottom: 3px solid #29ADB2;
 }
 
 .logo {
-  height: 170px;
+  height: 80px; 
   width: auto;
-  object-fit: contain;
-  padding-right: 80px;
+  flex-shrink: 0;
 }
 
-
-#menu-toggle {
-  display: none;
+.hamburger {
+  font-size: 2rem;
+  cursor: pointer;
+  display: none; 
 }
 
 .menu ul {
   list-style: none;
   display: flex;
   gap: 40px;
+  margin: 0;
+  padding: 0;
 }
 
 .menu a {
+  text-decoration: none;
   color: #0766AD;
   font-weight: bold;
   font-size: 1.5rem;
@@ -38,29 +41,34 @@ header {
 
 .menu a:hover {
   background-color: #29ADB2;
-  color: #0766AD;
+  color: white;
+}
+
+#menu-toggle {
+  display: none;
 }
 
 
 @media (max-width: 768px) {
 
-.hamburger {
-  display: block;
-  color: #0766AD;
-  font-size: 2rem;
-  margin-left: auto;
-}
+  
+  .hamburger {
+    display: block;
+    color: #0766AD;
+  }
 
+  
   .menu ul {
     display: none;
     flex-direction: column;
-    background-color: #333; 
+    background-color: #333;
     width: 100%;
     padding: 0;
     margin-top: 10px;
     border-radius: 8px;
   }
 
+  
   #menu-toggle:checked ~ .menu ul {
     display: flex;
   }
@@ -71,11 +79,17 @@ header {
     padding: 15px;
     color: white;
     background: #333;
+    border: none;
     font-size: 1.2rem;
   }
 
   .menu a:hover {
     background-color: #29ADB2;
     color: white;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
