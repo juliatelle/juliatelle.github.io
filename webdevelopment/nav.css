@@ -49,6 +49,13 @@ header {
 
 @media (max-width: 768px) {
 
+.hamburger {
+  display: block;
+  color: #0766AD;
+  font-size: 2rem;
+  margin-left: auto;
+}
+
   .menu ul {
     display: none;
     flex-direction: column;
