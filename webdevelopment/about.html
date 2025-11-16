@@ -2,8 +2,21 @@
   Name: Julia Telle
   Date: 9/21
   Page: About
-  Description: This is the about page for my website.
+  Description: This page allows users to learn more about my professional history.
 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,33 +30,46 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-  <header>
+  <!--Header-->
+ <header>
   <img src="logo.jpg.jpg" alt="Logo" class="logo">
 
+  <!-- Mobile Hamburger Menu -->
   <input type="checkbox" id="menu-toggle">
   <label for="menu-toggle" class="hamburger">☰</label>
 
+  <!-- Navigation -->
   <nav class="menu">
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="c.html">Content</a></li>
+
+      <li class="dropdown">
+        <a href="project.html">Content ▼</a>
+        <ul class="dropdown-content">
+          <li><a href="#canva">Canva</a></li>
+          <li><a href="#wevideo">WeVideo</a></li>
+          <li><a href="#miro">Miro</a></li>
+        </ul>
+      </li>
+
       <li><a href="Resources.html">Resources</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 </header>
 
+<!--Hero-->
   <section class="hero about-hero">
     <h1>EdTech Toolbox for Secondary Educators</h1>
     <h2>Discover resources that keep your classroom creative, collaborative, and compelling.</h2>
   </section>
 
-  <main class="about-grid">
+  <!--Bio-->
+  <main class="about">
     <section class="bio">
       <h1>About Me</h1>
       <p>Hello! My name is Julia Telle. I am a Learning Technologies and Design graduate student with an emphasis in Technology in Schools. I previously attended Missouri State University and graduated in 2019 with my BS.Ed in Secondary English Education. I live in St. Louis, Missouri and just began my seventh year as an eighth grade language arts teacher. I eventually hope to work in the K-12 setting as an instructional technology specialist.</p>
@@ -51,17 +77,17 @@
       <p>In this course, I hope to learn basic terminology and procedures related to web development. I believe this foundational knowledge is beneficial for a variety of work and educational environments. I also hope to apply what I learn from this course to my future capstone portfolio.</p>
 
       <p>When not studying or teaching, I love to read, watch sports, and go on hikes with my husband and our chocolate lab, Heinz. I also love to run and am currently training for my first half marathon!</p>
-
+<!--Resume-->
       <a href="resume.pdf" class="resume-link" target="_blank">Download My Resume!</a>
     </section>
-
+<!--Media (headshot & video)-->
     <section class="media">
       <img src="headshot.jpg" alt="Julia's headshot" class="profile-image">
       <video controls width="100%" class="resume-video">
         <source src="resumevid.mp4" type="video/mp4"> Your browser does not support the video tag.
       </video>
     </section>
-
+<!--Education Section-->
      <section class="education">
       <h3>Educational Overview</h3>
       <ul>

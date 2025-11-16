@@ -1,3 +1,4 @@
+/*HEADINGS, PARAGRAPHS, BLOCKQUOTE, & FOOTER*/
 h1 {
   color: #0766AD;
   font-size: 36px;
@@ -21,11 +22,12 @@ h3 {
   font-size: 24px;
   text-align: center;
   font-family: Roboto, sans-serif;
+  font-style: normal;
 }
 
 p {
   color: black;
-  font-size: 24px;
+  font-size: 26px;
   font-family: "Lexend", sans-serif;
   margin-bottom: 1em;
 }
@@ -56,6 +58,7 @@ color: black;
   font-family: "Lexend", sans-serif;
 }
 
+/*HEROS*/
 .hero {
   color: white;
   text-align: center;
@@ -74,6 +77,10 @@ color: black;
   background-image: url('resources.jpg.jpg');
 }
 
+.project-hero {
+  background-image: url('content.jpg')
+}
+
 .hero h1 {
   font-size: 75px;
   margin-bottom: 15px;
@@ -86,7 +93,7 @@ color: black;
 .hero h2 {
 font-size: 50px;
   margin-bottom: 15px;
-  color: #29AD; 
+  color: #29ADB2; 
   font-family: "Lexend", sans-serif;
   font-weight: 300;
   font-style: normal; 
@@ -117,6 +124,7 @@ font-size: 50px;
   background-color: #0766AD; 
 }
 
+/*LIST ITEMS*/
 ul {
   text-align: left;
   font-family: Roboto, sans-serif;
@@ -135,6 +143,7 @@ li {
   font-size: 20px; 
 }
 
+/*RESUME*/
 .resume-link {
   display: block; 
   width: fit-content;
@@ -149,6 +158,7 @@ li {
   font-family: Roboto, sans-serif; 
 }
 
+/*HEADSHOT*/
 .profile-image {
   display: block;
   width: 300px;
@@ -157,6 +167,7 @@ li {
   border-radius: 20px;  
 }
 
+/*RESUME VIDEO*/
 .resume-video {
   display: block;          
   width: 500px;            
@@ -165,6 +176,7 @@ li {
   border-radius: 20px;
 }
 
+/*PRINTING*/
 @media print {
   nav, .site-footer, .sidebar {
     display: none;
@@ -212,6 +224,7 @@ li {
   }
 }
 
+/*CONTACT FORM*/
 form {
   max-width: 700px;
   margin: 0 auto;
@@ -283,7 +296,8 @@ input[type="submit"]:hover {
   background-color: #C5E898;
 }
 
-.about-grid {
+/*ABOUT PAGE*/
+.about {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 2rem;
@@ -307,7 +321,7 @@ input[type="submit"]:hover {
   display: flex;
   flex-direction: column;
   align-items: right;
-  margin-top: 60px; 
+  margin-top: 60px;
 }
 
 .profile-image {
@@ -336,6 +350,7 @@ input[type="submit"]:hover {
   background-color: #005bb5;
 }
 
+/*ABOUT PAGE MOBILE LAYOUT*/
 @media (max-width: 768px) {
   .about-grid {
     grid-template-columns: 1fr;
@@ -347,6 +362,142 @@ input[type="submit"]:hover {
 
   .profile-image {
     max-width: 250px;
+  }
+}
+
+/*CONTENT VIDEO THUMBNAILS*/
+  .videothumbnail {
+  width: 700px;
+  height: auto;
+}
+
+.canva-logo {
+  width: 350px;      
+  height: auto;
+  padding-top: 50px;
+  padding-bottom: 150px;
+}
+
+.wevideo-logo {
+  width: 350px;      
+  height: auto;
+  padding-top: 50px;
+  padding-bottom: 150px;
+}
+
+.miro-logo {
+  width: 250px;      
+  height: auto;
+  padding-top: 50px;
+  padding-bottom: 150px;
+}
+
+/*ACTIVITY IDEAS*/
+  .subject {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .subject img {
+    width: 80px; 
+    height: 80px;
+    margin-right: 10px;
+  }
+
+  .subject-title {
+    font-weight: bold;
+    font-size: 1.4em;
+    font-family: Roboto, sans-serif; 
+  }
+
+  ul {
+    margin-top: 5px;
+    margin-left: 40px;  
+  }
+
+ /*PROJECT PAGE LAYOUT*/ 
+.project-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr;   
+  gap: 2rem;
+  align-items: start;
+  margin: 60px auto;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.project-media {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.project-media img.videothumbnail {
+  width: 100%;
+  max-width: 700px;
+}
+
+.project-media img {
+  max-width: 350px;
+  height: auto;
+}
+
+.project-content h2 {
+  text-align: left;
+}
+
+.project-content h3 {
+  text-align: left;
+}
+
+.project-content p {
+  text-align: left;
+  margin-bottom: 1em;
+}
+
+.project-content ul {
+  margin-left: 20px;
+}
+
+.project-content li {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.subject {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.subject img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+/*PROJECT PAGE MOBILE*/
+@media (max-width: 768px) {
+  .project-section {
+    grid-template-columns: 1fr;   
+    text-align: center;
+  }
+
+  .project-content h2,
+  .project-content h3,
+  .project-content p {
+    text-align: center;
+  }
+
+  .project-media img.videothumbnail {
+    max-width: 90%;
+  }
+
+  .subject {
+    justify-content: center;
   }
 }
 
