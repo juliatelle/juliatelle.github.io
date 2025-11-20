@@ -87,7 +87,6 @@ header {
 
 /* MOBILE */
 @media (max-width: 768px) {
-
   .menu {
     position: absolute;
     top: 60px;     
@@ -138,3 +137,14 @@ header {
     background-color: #0766AD;
   }
 }
+
+  .dropdown .dropdown-content {
+    display: none;
+    position: static; 
+    background-color: #29ADB2;
+    border-radius: 5px;
+  }
+
+  #menu-toggle:checked + .menu ul .dropdown .dropdown-content {
+    display: block;
+  }
