@@ -1,30 +1,62 @@
 <!--
   Name: Julia Telle
-  Date: 
-  Page:
-  Description:
+  Date: 9/15
+  Page: Index
+  Description: This is the homepage of my site.
 -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>My Starter Template</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 </head>
 
- <body>
-    <section class="hero">
-     <h1>Welcome to your EdTech Toolbox!</h1>
-      <p>Discover your new favorite classroom resource.</p>
-  <a href="#">Learn More</a>
-    </section>
+<body>
+  <!--Header-->
+ <header>
+  <img src="logo.jpg.jpg" alt="Logo" class="logo">
 
-   <h1>Welcome to Your EdTech Toolbox!</h1>
+  <!-- Mobile Hamburger Menu -->
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="hamburger">☰</label>
+
+  <!-- Navigation -->
+  <nav class="menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+
+      <li class="dropdown">
+        <a href="project.html">Content ▼</a>
+        <ul class="dropdown-content">
+          <li><a href="#canva">Canva</a></li>
+          <li><a href="#wevideo">WeVideo</a></li>
+          <li><a href="#miro">Miro</a></li>
+        </ul>
+      </li>
+
+      <li><a href="Resources.html">Resources</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!--Hero-->
+<section class="hero index-hero">
+   <h1>Welcome to your EdTech Toolbox!</h1>
+   <h2>Discover your new favorite classroom resources.</h2>
+  <a href="project.html" class="explore-btn">Explore</a>
+</section>
+
+<!--Description-->
+   <h1>Transform Your Classroom with EdTech</h1>
    <p>This site is designed to offer middle and high school teachers resources for integrating educational technology 
     into instruction. Here, you will be able to access tools, examples, and ready-to-use ideas that can be used in any 
     secondary core content area. The goal is to create accessible and engaging opportunities for learning that showcase 
@@ -34,7 +66,11 @@
     <blockquote>“Education is the passport to the future, for tomorrow belongs to those who prepare for it today.” -Malcolm X</blockquote>
 
 <footer>
-    <p> Created by Julia Telle 10/5/25</p>
+ <img src="phone.jpg.png" alt="phone icon" style="width:18px; vertical-align:middle; margin-right:8px;">
+ <h4 style="display:inline-block; vertical-align:middle;">123-456-7890</h4>
+<br>
+ <img src="mail.jpg.png" alt="mail icon" style="width:18px; vertical-align:middle; margin-right:8px;">
+ <h4 style="display:inline-block; vertical-align:middle;">juliatelle97@gmail.com</h4>
 </footer>
 
 </body>

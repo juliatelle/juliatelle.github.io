@@ -1,0 +1,153 @@
+/*  HEADER */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #C5E898;
+  gap:150px;
+  padding: 30px 50px;
+  border-bottom: 3px solid #29ADB2;
+}
+
+.logo {
+  height: 150px;
+  width: auto;
+  flex-shrink: 0;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+}
+
+/* MAIN NAVIGATION*/
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 60px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #0766AD;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  border: 3px solid #29ADB2;
+  border-radius: 10px;
+  background-color: white;
+  display: block;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+}
+
+.menu a:hover {
+  background-color: #29ADB2;
+  color: white;
+}
+
+/* DROPDOWN */
+.menu ul li {
+  position: relative; 
+}
+
+.menu ul li ul {
+  display: none;      
+  position: absolute; 
+  top: 100%;           
+  left: 0;
+  background-color: white;
+  padding: 0;
+  margin: 0;
+  min-width: 150px;
+  border-radius: 6px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  z-index: 999;
+}
+
+.menu ul li ul li a {
+  padding: 10px 15px;
+  border: none;
+  border-bottom: 1px solid #C5E898;
+}
+
+.menu ul li ul li a:hover {
+  background-color: blue;
+  color: white;
+}
+
+.menu ul li:hover > ul {
+  display: block;
+}
+
+/* MOBILE NAVIGATION */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: #C5E898;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 3px solid #29ADB2;
+  }
+
+  .menu {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    background-color: #29ADB2;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  #menu-toggle:checked + .menu {
+    max-height: 1000px; 
+  }
+
+
+  .menu ul {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .menu a {
+    color: white;
+    background-color: #29ADB2;
+    border: none;
+    padding: 15px;
+    font-size: 1.2rem;
+    display: block;
+    text-align: left;
+    font-family: Roboto, sans-serif;
+  }
+
+  .menu a:hover {
+    background-color: #0766AD;
+    color: white;
+  }
+
+
+  .menu ul li ul {
+    display: none;
+    flex-direction: column;
+    background-color: #0766AD;
+    padding-left: 15px;
+  }
+
+  .menu ul li .dropdown-content {
+    display: none;
+  }
+
+  
+  #menu-toggle:checked + .menu ul li .dropdown-content {
+    display: block;
+  }
