@@ -1,25 +1,40 @@
-/*  HEADER */
+/* HEADER */
 header {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  gap: 50px;          /* space between logo and nav */
+  padding: 20px 50px;
   background-color: #C5E898;
-  gap:150px;
-  padding: 30px 50px;
   border-bottom: 3px solid #29ADB2;
 }
 
+/* LOGO */
 .logo {
-  height: 150px;
+  height: 100px;
   width: auto;
   flex-shrink: 0;
 }
 
-/* Desktop Nav */
+/* HAMBURGER (MOBILE) */
+#menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  background-color: #C5E898;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 3px solid #29ADB2;
+}
+
+/* MAIN NAVIGATION */
 .menu ul {
   list-style: none;
   display: flex;
-  gap: 60px;
+  gap: 30px;  /* space between links */
   margin: 0;
   padding: 0;
 }
@@ -28,105 +43,15 @@ header {
   text-decoration: none;
   color: #0766AD;
   font-weight: bold;
-  font-size: 1.5rem;
-  padding: 10px 20px;
-  border: 3px solid #29ADB2;
-  border-radius: 10px;
-  background-color: white;
-  display: block;
-}
-
-.menu ul li {
-  position: relative;
-}
-
-/* Dropdown on desktop hover */
-.menu ul li ul {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: white;
-  padding: 0;
-  margin: 0;
-  min-width: 150px;
-  border-radius: 6px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.menu ul li:hover > ul {
-  display: block;
-}
-
-.menu ul li ul li a {
-  border-bottom: 1px solid #C5E898;
+  font-size: 1.2rem;
   padding: 10px 15px;
-}
-
-.menu ul li ul li a:hover {
-  background-color: blue;
-  color: white;
-}
-
-/* Hamburger (mobile) */
-.hamburger {
-  display: none;
-  cursor: pointer;
-  font-size: 2rem;
-  background-color: #C5E898;
-  padding: 10px 20px;
-  border-radius: 8px;
   border: 3px solid #29ADB2;
+  border-radius: 8px;
+  background-color: white;
+  display: block;
 }
 
-/* Mobile Nav */
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
-  .menu {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #29ADB2;
-    border-radius: 8px;
-    overflow: hidden;
-  }
-
-  #menu-toggle:checked + .hamburger + .menu {
-    display: flex;
-  }
-
-  .menu ul {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .menu a {
-    color: white;
-    background-color: #29ADB2;
-    border: none;
-    font-size: 1.3rem;
-  }
-
-  /* Dropdowns in mobile nav: show on click */
-  .menu ul li ul {
-    position: relative;
-    top: 0;
-    box-shadow: none;
-    display: none;
-    flex-direction: column;
-    padding-left: 20px;
-    background-color: #0766AD;
-  }
-
-  .menu ul li:active > ul,
-  .menu ul li:focus-within > ul {
-    display: flex;
-  }
-
-  .menu ul li ul li a {
-    border-bottom: 1px solid #29ADB2;
-  }
-}
+/* Hover */
+.menu a:hover {
+  background-color: #29ADB2;
+  color: white;
