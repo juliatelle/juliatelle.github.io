@@ -75,7 +75,10 @@ margin-top: 2rem;
 }
 
 .about-hero {
-  background-image: url('about.jpg.jpg')
+  background-image: url('about.jpg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .Resources-hero {

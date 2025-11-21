@@ -147,8 +147,7 @@ header {
     display: none;
   }
 
-  .menu ul li ul li a:hover {
-    background-color: #29ADB2;
-    color: white;
+  
+  #menu-toggle:checked + .menu ul li .dropdown-content {
+    display: block;
   }
-}
