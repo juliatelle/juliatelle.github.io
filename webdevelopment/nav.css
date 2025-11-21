@@ -1,40 +1,33 @@
-/* HEADER */
+/*  HEADER */
 header {
   display: flex;
   align-items: center;
-  gap: 50px;          /* space between logo and nav */
-  padding: 20px 50px;
+  justify-content: flex-start;
   background-color: #C5E898;
+  gap:150px;
+  padding: 30px 50px;
   border-bottom: 3px solid #29ADB2;
 }
 
-/* LOGO */
 .logo {
-  height: 100px;
+  height: 150px;
   width: auto;
   flex-shrink: 0;
 }
 
-/* HAMBURGER (MOBILE) */
 #menu-toggle {
   display: none;
 }
 
 .hamburger {
   display: none;
-  font-size: 2rem;
-  cursor: pointer;
-  background-color: #C5E898;
-  padding: 10px 15px;
-  border-radius: 8px;
-  border: 3px solid #29ADB2;
 }
 
-/* MAIN NAVIGATION */
+/* MAIN NAVIGATION*/
 .menu ul {
   list-style: none;
   display: flex;
-  gap: 30px;  /* space between links */
+  gap: 60px;
   margin: 0;
   padding: 0;
 }
@@ -43,16 +36,85 @@ header {
   text-decoration: none;
   color: #0766AD;
   font-weight: bold;
-  font-size: 1.2rem;
-  padding: 10px 15px;
+  font-size: 1.5rem;
+  padding: 10px 20px;
   border: 3px solid #29ADB2;
-  border-radius: 8px;
+  border-radius: 10px;
   background-color: white;
   display: block;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
 }
 
-/* Hover */
 .menu a:hover {
   background-color: #29ADB2;
   color: white;
+}
+
+/* DESKTOP DROPDOWN */
+.menu ul li {
+  position: relative;
+}
+
+.menu ul li .desktop-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border-radius: 6px;
+  min-width: 150px;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li:hover > .desktop-dropdown {
+  display: block;
+}
+
+.menu ul li .desktop-dropdown li a {
+  padding: 10px 15px;
+  border-bottom: 1px solid #C5E898;
+}
+
+.menu ul li .desktop-dropdown li a:hover {
+  background-color: blue;
+  color: white;
+}
+
+/* MOBILE NAVIGATION */
+@media (max-width: 768px) {
+  .dropdown input {
+    display: none;
+  }
+
+  .dropdown-label {
+    display: block;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: Roboto, sans-serif;
+  }
+
+  .dropdown-content {
+    display: none;
+    flex-direction: column;
+    padding-left: 15px;
+    background-color: #0766AD;
+  }
+
+  #dropdown-toggle:checked + .dropdown-label + .dropdown-content {
+    display: flex;
+  }
+
+  .dropdown-content li a {
+    color: white;
+    padding: 10px 15px;
+    border-bottom: 1px solid #29ADB2;
+  }
+
+  .dropdown-content li a:hover {
+    background-color: #29ADB2;
+  }
 }
