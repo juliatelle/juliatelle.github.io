@@ -143,6 +143,7 @@ font-size: 50px;
   border-radius: 12px;
   text-decoration: none;
   text-align: center;
+  padding-top: 10px;
 }
 
 .explore-btn:hover {
