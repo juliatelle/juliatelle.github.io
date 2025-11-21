@@ -76,9 +76,6 @@ margin-top: 2rem;
 
 .about-hero {
   background-image: url('about.jpg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .Resources-hero {
@@ -99,7 +96,7 @@ margin-top: 2rem;
 }
 
 .hero h2 {
-font-size: 50px;
+font-size: 60px;
   margin-bottom: 15px;
   color: #29ADB2; 
   font-family: "Lexend", sans-serif;
