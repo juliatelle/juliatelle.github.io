@@ -52,33 +52,36 @@ header {
 }
 
 /* DESKTOP DROPDOWN */
-.menu ul li {
+.menu ul li.dropdown {
   position: relative;
 }
 
-.menu ul li .desktop-dropdown {
-  display: none;
+.menu ul li.dropdown .dropdown-content {
+  display: none; 
   position: absolute;
   top: 100%;
   left: 0;
   background-color: white;
-  border-radius: 6px;
   min-width: 150px;
+  border-radius: 6px;
   padding: 0;
   margin: 0;
 }
 
-.menu ul li:hover > .desktop-dropdown {
-  display: block;
+.menu ul li.dropdown:hover > .dropdown-content {
+  display: block; 
 }
 
-.menu ul li .desktop-dropdown li a {
+.menu ul li.dropdown .dropdown-content li a {
   padding: 10px 15px;
+  display: block;
+  color: #0766AD;
+  text-decoration: none;
   border-bottom: 1px solid #C5E898;
 }
 
-.menu ul li .desktop-dropdown li a:hover {
-  background-color: blue;
+.menu ul li.dropdown .dropdown-content li a:hover {
+  background-color: #29ADB2;
   color: white;
 }
 
