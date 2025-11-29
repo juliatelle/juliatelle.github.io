@@ -469,14 +469,14 @@ footer {
   }
 
   footer span {
-    font-size: 0.7rem;
+    font-size: 0.5rem;
   }
 }
 
 /*Resources Mobile*/
 @media (max-width: 768px) {
 .Resources-hero h1 {
-    font-size: 2px
+    font-size: 6px
     line-height: 1.3;
     text-align: center;
   }
