@@ -378,7 +378,6 @@ input[type="submit"]:hover {
 }
 
 /*About Page Mobile*/
-/* About Page Mobile */
 @media (max-width: 768px) {
 
   .about {
@@ -399,10 +398,17 @@ input[type="submit"]:hover {
     word-break: break-word;
   }
 
-    .about p {
+  .about p {
     font-size: 0.8rem;   
     line-height: 1.5;
   }
+
+    .resume-button {
+    display: block;       
+    margin: 1rem auto;    
+    width: fit-content;   
+    text-align: center;   
+}
 
   img {
     display: block;          
@@ -414,7 +420,7 @@ input[type="submit"]:hover {
 
   .resume-video {
     display: block;          
-    margin-right: 10px;     
+    margin: 1rem auto;  
     width: 90%;              
     max-width: 97%;         
     height: auto;
@@ -424,7 +430,7 @@ input[type="submit"]:hover {
    .edu-table {
     width: 97%;
     display: block;
-    margin-right: 10px;   
+    margin: 1rem auto;  
     overflow-x: auto;
     font-size: 0.5rem;
   }
