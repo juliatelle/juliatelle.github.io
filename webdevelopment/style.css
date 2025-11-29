@@ -380,13 +380,29 @@ input[type="submit"]:hover {
 /*About Page*/
 @media (max-width: 768px) {
 
-  h1, h2 {
-    font-size: 1.6rem;
-    line-height: 1.2;
+  .about-section,
+  .about-grid,
+  .text-content {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    overflow-wrap: break-word;
   }
 
-  h3 {
-    font-size: 1.3rem;
+  .profile-image {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  h1, h2 {
+    font-size: 1.6rem;
   }
 
   p, li {
@@ -394,29 +410,6 @@ input[type="submit"]:hover {
     line-height: 1.5;
   }
 
-  .about-section,
-  .about-grid,
-  .text-content {
-    padding: 10px 15px;
-  }
-
-  .about-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .media {
-    grid-column: 1 / 2;
-  }
-
-  .profile-image {
-    max-width: 250px;
-    width: 100%;
-    height: auto;
-  }
-
-.bio {
-  overflow-x: hidden;
-}
 }
 
 /*CONTENT VIDEO THUMBNAILS*/
