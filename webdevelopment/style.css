@@ -407,15 +407,15 @@ input[type="submit"]:hover {
   img {
     display: block;          
     margin: 1rem auto;       
-    width: 97%;              
-    max-width: 97%;         
+    width: 100%;              
+    max-width: 100%;         
     height: auto;
   }
 
   .resume-video {
     display: block;          
-    margin: 1rem auto;       
-    width: 95%;              
+    margin-right: 10px;     
+    width: 90%;              
     max-width: 97%;         
     height: auto;
   }
@@ -424,13 +424,14 @@ input[type="submit"]:hover {
    .edu-table {
     width: 97%;
     display: block;
+    margin-right: 10px;   
     overflow-x: auto;
-    font-size: 0.8rem;
+    font-size: 0.5rem;
   }
 
   .edu-table th,
   .edu-table td {
-    font-size: 0.8rem;
+    font-size: 0.5rem;
     padding: 0.4rem 0.6rem;
   }
 
