@@ -399,8 +399,14 @@ input[type="submit"]:hover {
     word-break: break-word;
   }
 
+    .about p {
+    font-size: 0.9rem;   
+    line-height: 1.5;
+  }
+
   img,
   video {
+    display: block;
     max-width: 100%;
     height: auto;
     display: block;
@@ -410,6 +416,7 @@ input[type="submit"]:hover {
     width: 100%;
     display: block;
     overflow-x: auto;
+    font-size: 0.8rem; 
   }
 
   body {
