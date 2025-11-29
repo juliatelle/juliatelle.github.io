@@ -379,37 +379,53 @@ input[type="submit"]:hover {
 
 /*About Page Mobile*/
 @media (max-width: 768px) {
+
   .about {
-    grid-template-columns: 1fr !important; 
-    padding: 1rem 1rem;                    
-    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr !important;
+    padding: 1rem;
     width: 100%;
-    overflow-wrap: break-word;
-    box-sizing: border-box;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
-
+  .about p,
+  .about h1,
+  .about h2,
   .bio,
   .education,
   .media {
-    grid-column: 1 / 2 !important;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
   }
 
-  .media {
-    align-items: center;  
-    margin-top: 20px;
+  .hero h1, .hero h2 {
+    text-align: center;
+    overflow-wrap: break-word;
+    font-size: clamp(1rem, 5vw, 2rem);
   }
 
-  .profile-image {
-    max-width: 200px;
-    width: 100%;
+
+  img, video {
+    max-width: 100%;
     height: auto;
+  }
+
+
+  .edu-table {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    overflow-x: auto;
   }
 
   body {
     overflow-x: hidden;
   }
 }
+
 
 /*CONTENT VIDEO THUMBNAILS*/
   .videothumbnail {
