@@ -24,6 +24,10 @@ header {
 }
 
 /* MAIN NAVIGATION*/
+.menu {
+  margin-left: 60px;
+}
+
 .menu ul {
   list-style: none;
   display: flex;
