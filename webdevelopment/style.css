@@ -403,14 +403,14 @@ input[type="submit"]:hover {
     line-height: 1.5;
   }
 
-    .resume-button {
+  .resume-button {
     display: block;       
     margin: 1rem auto;    
     width: fit-content;   
     text-align: center;   
 }
 
-  img {
+img {
     display: block;          
     margin: 1rem auto;       
     width: 100%;              
@@ -418,7 +418,7 @@ input[type="submit"]:hover {
     height: auto;
   }
 
-  .resume-video {
+.resume-video {
     display: block;          
     margin: 1rem auto;  
     width: 90%;              
@@ -427,7 +427,7 @@ input[type="submit"]:hover {
   }
 
 
-   .edu-table {
+  .edu-table {
     width: 97%;
     display: block;
     margin: 1rem auto;  
@@ -442,8 +442,54 @@ input[type="submit"]:hover {
   }
 
 
-  body {
+body {
     overflow-x: hidden;
+  }
+
+
+/*Footer Mobile*/
+@media (max-width: 768px) {
+  footer {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    gap: 0.5rem;            
+    padding: 1rem;
+  }
+
+  footer .contact-item {
+    display: flex;
+    align-items: center;   
+    gap: 0.5rem;           
+  }
+
+  footer img {
+    width: 18px;
+    height: auto;
+  }
+
+  footer span {
+    font-size: 0.9rem;      
+  }
+}
+
+/*Resources Mobile*/
+@media (max-width: 768px) {
+
+  section p, section h2 {
+    font-size: 0.9rem;          
+    line-height: 1.5;
+    word-wrap: break-word;      
+    overflow-wrap: anywhere;  
+  }
+
+  a {
+    word-break: break-all;      
+    overflow-wrap: anywhere;    
+  }
+
+  section {
+    padding: 0 1rem;         
   }
 }
 
@@ -646,4 +692,5 @@ caption {
   figcaption {
     font-size: 1rem;
   }
+}
 }
