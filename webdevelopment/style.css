@@ -394,29 +394,30 @@ input[type="submit"]:hover {
   .bio,
   .education,
   .media {
-    max-width: 100%;
+    max-width: 98%;
     overflow-wrap: break-word;
     word-break: break-word;
   }
 
     .about p {
-    font-size: 0.9rem;   
+    font-size: 0.8rem;   
     line-height: 1.5;
   }
 
   img,
   video {
-    display: block;
-    max-width: 100%;
+    display: block;          
+    margin: 1rem auto;       
+    width: 90%;              
+    max-width: 98%;         
     height: auto;
-    display: block;
   }
 
   .edu-table {
-    width: 100%;
+    width: 95%;
     display: block;
     overflow-x: auto;
-    font-size: 0.8rem; 
+    font-size: 0.6rem; 
   }
 
   body {
