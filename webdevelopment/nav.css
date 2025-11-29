@@ -85,6 +85,21 @@ header {
   color: white;
 }
 
+/*MOBILE HEADER*/
+@media (max-width: 768px) {
+  header {
+    gap: 20px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    height: 50px;  
+    width: auto;
+  }
+}
+
 /* MOBILE NAVIGATION */
 @media (max-width: 768px) {
   .hamburger {
@@ -92,7 +107,7 @@ header {
     font-size: 2rem;
     cursor: pointer;
     background-color: #C5E898;
-    padding: 10px 20px;
+    padding: 20px;
     border-radius: 8px;
     border: 3px solid #29ADB2;
   }
