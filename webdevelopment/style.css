@@ -1,3 +1,10 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden !important;
+}
+
+
 /*HEADINGS, PARAGRAPHS, BLOCKQUOTE, & FOOTER*/
 h1 {
   color: #0766AD;
@@ -698,7 +705,7 @@ html, body {
   }
 
 .Resources-hero h1 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     line-height: 1.3;
     word-break: break-word;
   }
