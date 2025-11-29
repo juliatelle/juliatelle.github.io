@@ -409,16 +409,34 @@ input[type="submit"]:hover {
     display: block;          
     margin: 1rem auto;       
     width: 90%;              
-    max-width: 98%;         
+    max-width: 97%;         
     height: auto;
   }
 
   .edu-table {
-    width: 95%;
-    display: block;
-    overflow-x: auto;
-    font-size: 0.6rem; 
+    width: 100%;
+    display: table;
+    font-size: 0.75rem;
+    table-layout: fixed;      
+    word-break: break-word;  
   }
+
+  .edu-table th:first-child,
+  .edu-table td:first-child {
+    width: 35%;               
+  }
+
+  .edu-table th:not(:first-child),
+  .edu-table td:not(:first-child) {
+    width: 65%;             
+  }
+
+  .edu-table th,
+  .edu-table td {
+    padding: 0.3rem 0.5rem;
+    word-break: break-word;
+  }
+
 
   body {
     overflow-x: hidden;
