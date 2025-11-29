@@ -448,19 +448,22 @@ body {
 
 
 /*Footer Mobile*/
+<style>
 @media (max-width: 768px) {
-footer {
+
+  /* Footer fixes */
+  footer {
     display: flex;
-    flex-direction: vertical;   
-    align-items: center;      
-    gap: 0.5rem;              
+    flex-direction: column; 
+    align-items: center;    
+    gap: 0.5rem;
     padding: 1rem;
   }
 
   .contact-item {
     display: flex;
-    align-items: center;      
-    gap: 0.5rem;              
+    align-items: center;    
+    gap: 0.5rem;
   }
 
   footer img {
@@ -468,15 +471,19 @@ footer {
     height: auto;
   }
 
-  footer span {
-    font-size: 0.5rem;
+  footer span, footer h4 {
+    font-size: 0.6rem;
+    word-break: break-all;     
+    overflow-wrap: anywhere;   
   }
 }
+</style>
+
 
 /*Resources Mobile*/
 @media (max-width: 768px) {
 .Resources-hero h1 {
-    font-size: 6px
+    font-size: 10px
     line-height: 1.3;
     text-align: center;
   }
