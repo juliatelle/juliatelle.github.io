@@ -378,14 +378,13 @@ input[type="submit"]:hover {
 }
 
 /*About Page Mobile*/
+/* About Page Mobile */
 @media (max-width: 768px) {
 
   .about {
-    display: grid;
-    grid-template-columns: 1fr !important;
-    padding: 1rem;
+    display: block !important;  
     width: 100%;
-    max-width: 100%;
+    padding: 1rem;
     overflow-x: hidden;
   }
 
@@ -397,26 +396,18 @@ input[type="submit"]:hover {
   .media {
     max-width: 100%;
     overflow-wrap: break-word;
-    word-wrap: break-word;
     word-break: break-word;
   }
 
-  .hero h1, .hero h2 {
-    text-align: center;
-    overflow-wrap: break-word;
-    font-size: clamp(1rem, 5vw, 2rem);
-  }
-
-
-  img, video {
+  img,
+  video {
     max-width: 100%;
     height: auto;
+    display: block;
   }
-
 
   .edu-table {
     width: 100%;
-    max-width: 100%;
     display: block;
     overflow-x: auto;
   }
@@ -425,7 +416,6 @@ input[type="submit"]:hover {
     overflow-x: hidden;
   }
 }
-
 
 /*CONTENT VIDEO THUMBNAILS*/
   .videothumbnail {
