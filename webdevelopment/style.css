@@ -71,6 +71,7 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 3rem; 
+}
 
 footer .contact-item {
   display: flex;
@@ -81,7 +82,6 @@ footer .contact-item {
 footer img {
   width: 20px;
   height: auto;
-}
 }
 
 section {
@@ -162,7 +162,7 @@ font-size: 50px;
   margin-top: 20px;
   font-size: 20px;
   font-weight: bold;
-  font-family:Roboto, sans-serif; ;
+  font-family: Roboto, sans-serif; 
   color: white;
   background-color: #29ADB2;  
   border: 3px solid #0766AD;  
@@ -406,7 +406,7 @@ input[type="submit"]:hover {
 /*About Page Mobile*/
 @media (max-width: 768px) {
   .about {
-    display: block !important;  
+    display: block !important;
     width: 100%;
     padding: 1rem;
     overflow-x: hidden;
@@ -424,38 +424,37 @@ input[type="submit"]:hover {
   }
 
   .about p {
-    font-size: 0.8rem;   
+    font-size: 0.8rem;
     line-height: 1.5;
   }
 
   .resume-button {
-    display: block;       
-    margin: 1rem auto;    
-    width: fit-content;   
-    text-align: center;   
-}
+    display: block;
+    margin: 1rem auto;
+    width: fit-content;
+    text-align: center;
+  }
 
-img {
-    display: block;          
-    margin: 1rem auto;       
-    width: 100%;              
-    max-width: 100%;         
+  img {
+    display: block;
+    margin: 1rem auto;
+    width: 100%;
+    max-width: 100%;
     height: auto;
   }
 
-.resume-video {
-    display: block;          
-    margin: 1rem auto;  
-    width: 90%;              
-    max-width: 97%;         
+  .resume-video {
+    display: block;
+    margin: 1rem auto;
+    width: 90%;
+    max-width: 97%;
     height: auto;
   }
-
 
   .edu-table {
     width: 97%;
     display: block;
-    margin: 1rem auto;  
+    margin: 1rem auto;
     overflow-x: auto;
     font-size: 0.5rem;
   }
@@ -466,13 +465,12 @@ img {
     padding: 0.4rem 0.6rem;
   }
 
-
-body {
+  body {
     overflow-x: hidden;
   }
+} 
 
-
-/*Footer Mobile*/
+/* Footer Mobile*/
 @media (max-width: 768px) {
   footer {
     display: flex;
@@ -499,6 +497,7 @@ body {
     overflow-wrap: anywhere;
   }
 }
+
 
 /*CONTENT VIDEO THUMBNAILS*/
   .videothumbnail {
@@ -678,7 +677,7 @@ figure {
 figcaption {
   font-size: 1.2rem;
   font-weight: 600;
-  font-family:Roboto, sans-serif; 
+  font-family: Roboto, sans-serif; 
   margin-bottom: 8px;
 }
 
@@ -700,18 +699,17 @@ caption {
     font-size: 1rem;
   }
 }
-}
 
 /*Resources Mobile*/
 @media (max-width: 768px) {
-
-html, body {
-    overflow-x: hidden;
-    width: 100%;
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.5;
-    color: #333;
+  html, body {
+      overflow-x: hidden;
+      width: 100%;
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.5;
+      color: #333;
   }
+}
 
   * {
     max-width: 100%;
@@ -785,5 +783,3 @@ footer span {
     font-size: 0.85rem;
     word-break: break-word;
   }
-
-}
