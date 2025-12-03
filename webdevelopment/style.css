@@ -7,7 +7,7 @@ html, body {
 /*HEADINGS, PARAGRAPHS, BLOCKQUOTE, & FOOTER*/
 h1 {
   color: #0766AD;
-  font-size: 36px;
+  font-size: 40px;
   text-align: center;
   font-family: "Lexend", sans-serif;
   font-weight: 400;
@@ -85,8 +85,8 @@ footer img {
 }
 
 section {
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 /*HEROS*/
@@ -619,7 +619,6 @@ input[type="submit"]:hover {
   margin-right: 10px;
 }
 
-.project-section h1,
 .project-section h2 {
   letter-spacing: 2px;    
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
