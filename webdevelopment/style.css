@@ -720,8 +720,6 @@ caption {
       line-height: 1.5;
       color: #333;
   }
-}
-
   * {
     max-width: 100%;
     box-sizing: border-box;
@@ -794,3 +792,4 @@ footer span {
     font-size: 0.85rem;
     word-break: break-word;
   }
+}
