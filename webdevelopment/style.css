@@ -621,7 +621,7 @@ input[type="submit"]:hover {
   margin-right: 10px;
 }
 
-/* Custom styles for all h2 on page*/
+/* Custom styles for all h2 on project page*/
 .project-section h2 {
   letter-spacing: 2px;    
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
