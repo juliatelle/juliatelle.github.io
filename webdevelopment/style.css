@@ -613,6 +613,10 @@ caption {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
+/* ===========================
+   MOBILE STYLES - ALL PAGES
+   Max width 768px
+=========================== */
 @media (max-width: 768px) {
 
   /* ---------------------------
@@ -631,12 +635,11 @@ caption {
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 auto !important;
-    padding: 0 1rem !important; /* reduced margins */
-    box-sizing: border-box;
+    padding: 0 1rem !important;
   }
 
   /* ---------------------------
-     Text Wrapping
+     Text Containers
   --------------------------- */
   p, li, h1, h2, h3,
   .bio, .education, .media,
@@ -645,104 +648,147 @@ caption {
     max-width: 100% !important;
     overflow-wrap: break-word !important;
     word-break: break-word !important;
-    white-space: normal !important; /* important to prevent cutting off */
   }
 
-  /* ---------------------------
-     Headings & Paragraphs
-  --------------------------- */
-  p { font-size: 1rem !important; line-height: 1.4; }
+  p { font-size: 0.9rem !important; line-height: 1.4; }
   h1 { font-size: 2rem !important; line-height: 1.2; }
   h2 { font-size: 1.5rem !important; line-height: 1.3; }
   h3 { font-size: 1.2rem !important; line-height: 1.3; }
 
   /* ---------------------------
-     Images & Videos
+     Buttons & Links
   --------------------------- */
-  img, video, .profile-image, .resume-video,
-  .project-media img.videothumbnail,
-  .canva-logo, .wevideo-logo, .miro-logo {
-    width: 100% !important;        /* scale images to container */
-    max-width: 300px !important;   /* prevent huge logos */
-    height: auto !important;
-    display: block !important;
-    margin: 1rem auto !important;
-  }
+  a { word-break: break-word; overflow-wrap: anywhere; }
 
-  .profile-image, .resume-video {
-    max-width: 250px !important; /* smaller headshot/video */
-  }
-
-  .canva-logo, .wevideo-logo, .miro-logo {
-    max-width: 200px !important;
-    padding-top: 20px !important;
-    padding-bottom: 20px !important;
-  }
-
-  /* ---------------------------
-     Buttons
-  --------------------------- */
   .resume-link, .hero-btn, .explore-btn {
     display: block !important;
     width: 90% !important;
-    max-width: 300px !important;
+    max-width: 400px !important;
     margin: 1rem auto !important;
     text-align: center;
     padding: 10px 0 !important;
-    font-size: 1rem !important;
+    font-size: 1.2rem !important;
     border-radius: 10px !important;
   }
 
   /* ---------------------------
-     About & Project Grids
+     About Page Grid
   --------------------------- */
-  .about-grid, .project-section {
-    display: block !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    text-align: center !important;
-    margin: 0 auto !important;
+  .about-grid {
+      display: block !important;
+      padding: 0 1rem !important;
+      max-width: 100% !important;
+      margin: 0 auto !important;
+      text-align: center !important;
   }
 
-  .bio, .education, .media,
-  .project-content, .project-media {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 auto !important;
-    text-align: center !important;
+  .bio, .education, .media {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 auto !important;
+      text-align: center !important;
+      padding: 0 !important;
+  }
+
+  .media {
+      margin-top: 2rem !important;
+      align-items: center !important;
   }
 
   /* ---------------------------
-     Tables
+     Project Page
   --------------------------- */
-  .edu-table {
-    width: 100% !important;
-    max-width: 100% !important;
-    display: block !important;
-    overflow-x: auto !important;
-    table-layout: fixed !important;
-    border-collapse: collapse !important;
-    font-size: 0.9rem !important;
+  .project-section {
+      display: block !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      text-align: center !important;
+      padding: 0 1rem !important;
   }
 
-  .edu-table th, .edu-table td {
-    padding: 8px !important;
-    border: 1px solid #0766AD !important;
-    text-align: left !important;
-    word-wrap: break-word !important;
+  .project-content, .project-media {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 auto !important;
+      text-align: center !important;
+  }
+
+  .project-media img.videothumbnail {
+      width: 100% !important;
+      max-width: 300px !important;
+      height: auto !important;
+      margin: 1rem auto !important;
+  }
+
+  .project-media img {
+      width: 80% !important;
+      max-width: 200px !important;
+      height: auto !important;
   }
 
   /* ---------------------------
      Hero Sections
   --------------------------- */
   .hero, .index-hero, .about-hero, .Resources-hero, .project-hero {
-    padding: 2rem 1rem !important;
-    text-align: center !important;
+      padding: 3rem 1rem !important;
+      text-align: center !important;
   }
 
-  .hero h1 { font-size: 2rem !important; }
-  .hero h2 { font-size: 1.5rem !important; }
+  .hero h1 { font-size: 2.5rem !important; }
+  .hero h2 { font-size: 1.8rem !important; }
   .hero p  { font-size: 1rem !important; }
+
+  .Resources-hero h1 { font-size: 2rem !important; line-height: 1.2; }
+  .Resources-hero h2 { font-size: 1.5rem !important; line-height: 1.3; }
+  .Resources-hero p { font-size: 1rem !important; }
+
+  /* ---------------------------
+     Logos & Stickers
+  --------------------------- */
+  .canva-logo, .wevideo-logo, .miro-logo {
+      width: 70% !important;
+      max-width: 150px !important;
+      height: auto !important;
+      display: block !important;
+      margin: 1rem auto !important;
+  }
+
+  .subject img {
+      width: 50% !important;
+      max-width: 80px !important;
+      height: auto !important;
+      margin: 0 auto !important;
+  }
+
+  .profile-image, .resume-video {
+      width: 90% !important;
+      max-width: 250px !important;
+      margin: 1rem auto !important;
+  }
+
+  /* ---------------------------
+     Tables
+  --------------------------- */
+  .edu-table {
+      width: 100% !important;
+      max-width: 100% !important;
+      display: block !important;
+      overflow-x: auto !important;
+      table-layout: fixed !important;
+      border-collapse: collapse !important;
+      font-size: 0.9rem !important;
+  }
+
+  .edu-table th, .edu-table td {
+      padding: 8px !important;
+      border: 1px solid #0766AD !important;
+      text-align: left !important;
+      word-wrap: break-word !important;
+  }
+
+  .edu-table thead { display: table-header-group !important; }
+
+  figcaption { font-size: 1rem !important; }
 
   /* ---------------------------
      Footer
