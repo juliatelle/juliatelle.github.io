@@ -698,11 +698,11 @@ caption {
      Project Page
   --------------------------- */
 /* ---------------------------
-     Project Page Container
-     Switch to single column
+     Project Section
+     Stack everything vertically
   --------------------------- */
   .project-section {
-    display: block !important; /* stack everything vertically */
+    display: block !important;
     width: 100% !important;
     max-width: 100% !important;
     text-align: center !important;
@@ -721,15 +721,16 @@ caption {
      Lists inside Project Content
   --------------------------- */
   .project-content ul {
-    margin-left: 0.5rem !important; /* reduced indent */
+    margin-left: 0.5rem !important;
     padding-left: 1rem !important;
     font-size: 0.9rem !important;
-    text-align: left !important; /* keep left-aligned */
+    text-align: left !important;
+    margin-bottom: 1rem !important; /* spacing between lists */
   }
 
   .project-content li {
     font-size: 0.9rem !important;
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 0.3rem !important; /* reduce spacing between items */
   }
 
   /* ---------------------------
@@ -739,42 +740,59 @@ caption {
     display: flex !important;
     flex-direction: column !important; /* vertical stack */
     align-items: center !important;
-    gap: 0.5rem !important; /* reduced spacing */
+    gap: 0.3rem !important; /* reduce spacing between images */
+    margin-bottom: 1rem !important; /* spacing below media */
   }
 
   .project-media img.videothumbnail {
     width: 90% !important;
     max-width: 250px !important;
     height: auto !important;
-    margin: 0.5rem auto !important;
+    margin: 0.2rem auto !important;
   }
 
   .project-media img {
     width: 80% !important;
     max-width: 150px !important;
     height: auto !important;
-    margin: 0.5rem auto !important;
+    margin: 0.2rem auto !important;
   }
 
   /* ---------------------------
      Stickers / Logos
   --------------------------- */
   .canva-logo, .wevideo-logo, .miro-logo {
-    width: 40% !important; 
-    max-width: 80px !important;
+    width: 35% !important; 
+    max-width: 70px !important;
     height: auto !important;
-    margin: 0.5rem auto !important;
+    margin: 0.3rem auto !important;
   }
 
   /* ---------------------------
-     Subject Images (if any)
+     Subject Images and Titles
+     Reduce spacing between sticker and title
   --------------------------- */
+  .subject {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.3rem !important; /* smaller gap between image and title */
+    margin-bottom: 0.5rem !important; /* spacing below each subject */
+    justify-content: flex-start !important; /* left-align stickers and titles */
+  }
+
   .subject img {
-    width: 30% !important;
+    width: 25% !important;
     max-width: 50px !important;
     height: auto !important;
-    margin: 0 auto !important;
+    margin: 0 !important;
   }
+
+  .subject-title {
+    font-size: 0.95rem !important;
+    margin: 0 !important;
+    line-height: 1.2 !important;
+  }
+
   /* ---------------------------
      Hero Sections
   --------------------------- */
