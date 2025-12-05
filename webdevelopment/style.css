@@ -697,32 +697,58 @@ caption {
   /* ---------------------------
      Project Page
   --------------------------- */
-  .project-section {
-    display: block !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    text-align: center !important;
-    padding: 0 1rem !important;
+  /* Lists*/
+  .project-content ul {
+    margin-left: 0.5rem !important; /* reduced indent */
+    padding-left: 1rem !important;
+    font-size: 0.9rem !important;
+    text-align: left !important;
   }
 
-  .project-content, .project-media {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 auto !important;
-    text-align: center !important;
+  .project-content li {
+    font-size: 0.9rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  /* Media */
+  .project-media {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 0.5rem !important; /* reduced spacing */
   }
 
   .project-media img.videothumbnail {
-    width: 100% !important;
-    max-width: 300px !important;
+    width: 90% !important;
+    max-width: 250px !important; /* smaller than before */
     height: auto !important;
-    margin: 1rem auto !important;
+    margin: 0.5rem auto !important;
   }
 
   .project-media img {
     width: 80% !important;
-    max-width: 200px !important;
+    max-width: 150px !important; /* smaller than before */
     height: auto !important;
+    margin: 0.5rem auto !important;
+  }
+    /* ---------------------------
+     Stickers / Logos
+  --------------------------- */
+  .canva-logo, .wevideo-logo, .miro-logo {
+    width: 40% !important; /* reduced from 50-70% */
+    max-width: 80px !important; /* smaller than before */
+    height: auto !important;
+    margin: 0.5rem auto !important;
+  }
+
+  /* ---------------------------
+     Subject Images (if any)
+  --------------------------- */
+  .subject img {
+    width: 30% !important; /* smaller */
+    max-width: 50px !important;
+    height: auto !important;
+    margin: 0 auto !important;
   }
 
   /* ---------------------------
