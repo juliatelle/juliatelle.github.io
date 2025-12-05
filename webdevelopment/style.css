@@ -613,149 +613,157 @@ caption {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-
-/* MOBILE*/
+/* ===========================
+   MOBILE STYLES - ALL PAGES
+   Max width 768px
+=========================== */
 @media (max-width: 768px) {
-  /*General*/
+
+  /* ---------------------------
+     General Page Settings
+  --------------------------- */
   html, body {
-    width: 100%;
-    overflow-x: hidden;
+    width: 100% !important;
+    overflow-x: hidden !important;
     font-family: 'Montserrat', sans-serif;
     line-height: 1.5;
     color: #333;
   }
 
   section, section:not(.hero) {
-    margin: 0 1rem;
-    padding: 0;
-    width: 100%;
-    max-width: 100%;
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 1rem !important;
   }
 
-  /*Text Containers*/
+  /* ---------------------------
+     Text Containers
+  --------------------------- */
   p, li, h1, h2, h3,
   .bio, .education, .media,
   .project-content, .project-media,
   section {
-    max-width: 100%;
-    overflow-wrap: break-word;
-    word-break: break-word;
+    max-width: 100% !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
   }
 
-  p {
-    font-size: 0.9rem;
-    line-height: 1.4;
-  }
+  p { font-size: 0.9rem !important; line-height: 1.4; }
+  h1 { font-size: 2rem !important; line-height: 1.2; }
+  h2 { font-size: 1.5rem !important; line-height: 1.3; }
+  h3 { font-size: 1.2rem !important; line-height: 1.3; }
 
-  h1 { font-size: 2rem; line-height: 1.2; }
-  h2 { font-size: 1.5rem; line-height: 1.3; }
-  h3 { font-size: 1.2rem; line-height: 1.3; }
-
-  /*Links & Buttons*/
-  a {
-    word-break: break-word;
-    overflow-wrap: anywhere;
-  }
+  /* ---------------------------
+     Links & Buttons
+  --------------------------- */
+  a { word-break: break-word; overflow-wrap: anywhere; }
 
   .resume-link, .hero-btn, .explore-btn {
-    display: block;
-    width: 90%;
-    max-width: 400px;
-    margin: 1rem auto;
+    display: block !important;
+    width: 90% !important;
+    max-width: 400px !important;
+    margin: 1rem auto !important;
     text-align: center;
-    padding: 10px 0;
-    font-size: 1.2rem;
-    border-radius: 10px;
+    padding: 10px 0 !important;
+    font-size: 1.2rem !important;
+    border-radius: 10px !important;
   }
 
-  /* About Grid*/
+  /* ---------------------------
+     About & Project Grids
+  --------------------------- */
   .about-grid, .project-section {
-    display: block;
-    width: 100%;
-    text-align: center;
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
   }
 
   .bio, .education, .media,
   .project-content, .project-media {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-    text-align: center;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    text-align: center !important;
   }
 
-  /*Media*/
+  /* ---------------------------
+     Media (Images & Videos)
+  --------------------------- */
   img, video, .profile-image, .resume-video,
   .project-media img.videothumbnail,
   .canva-logo, .wevideo-logo, .miro-logo {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 1rem auto;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    margin: 1rem auto !important;
   }
 
-  .resume-video {
-    margin: 1rem auto;
-  }
+  .resume-video { margin: 1rem auto !important; }
 
-  /*Table*/
+  /* ---------------------------
+     Tables
+  --------------------------- */
   .edu-table {
-    width: 100%;
-    max-width: 100%;
-    display: block;
-    overflow-x: auto;
-    table-layout: fixed;
-    border-collapse: collapse;
-    font-size: 0.9rem;
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+    overflow-x: auto !important;
+    table-layout: fixed !important;
+    border-collapse: collapse !important;
+    font-size: 0.9rem !important;
   }
 
   .edu-table th, .edu-table td {
-    padding: 8px;
-    border: 1px solid #0766AD;
-    text-align: left;
-    word-wrap: break-word;
+    padding: 8px !important;
+    border: 1px solid #0766AD !important;
+    text-align: left !important;
+    word-wrap: break-word !important;
   }
 
-  .edu-table thead {
-    display: table-header-group;
-  }
+  .edu-table thead { display: table-header-group !important; }
 
-  figcaption {
-    font-size: 1rem;
-  }
+  figcaption { font-size: 1rem !important; }
 
-  /*Hero Sections*/
+  /* ---------------------------
+     Hero Sections
+  --------------------------- */
   .hero, .index-hero, .about-hero, .Resources-hero, .project-hero {
-    padding: 3rem 1rem;
-    text-align: center;
+    padding: 3rem 1rem !important;
+    text-align: center !important;
   }
 
-  .hero h1 { font-size: 2.5rem; }
-  .hero h2 { font-size: 1.8rem; }
-  .hero p  { font-size: 1rem; }
+  .hero h1 { font-size: 2.5rem !important; }
+  .hero h2 { font-size: 1.8rem !important; }
+  .hero p  { font-size: 1rem !important; }
 
-  .Resources-hero h1 { font-size: 2rem; line-height: 1.2; }
-  .Resources-hero h2 { font-size: 1.5rem; line-height: 1.3; }
-  .Resources-hero p  { font-size: 1rem; }
+  .Resources-hero h1 { font-size: 2rem !important; line-height: 1.2; }
+  .Resources-hero h2 { font-size: 1.5rem !important; line-height: 1.3; }
+  .Resources-hero p { font-size: 1rem !important; }
 
-  /*Footer*/
+  /* ---------------------------
+     Footer
+  --------------------------- */
   footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 1rem;
-    text-align: center;
-    background-color: #f5f5f5;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    padding: 1rem !important;
+    text-align: center !important;
+    background-color: #f5f5f5 !important;
   }
 
   footer .contact-item {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.5rem;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
   }
 
-  footer img { width: 18px; height: auto; }
-  footer span { font-size: 0.85rem; word-break: break-word; }
+  footer img { width: 18px !important; height: auto !important; }
+  footer span { font-size: 0.85rem !important; word-break: break-word !important; }
 }
