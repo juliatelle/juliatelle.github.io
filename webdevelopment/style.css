@@ -613,10 +613,6 @@ caption {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* ===========================
-   MOBILE STYLES - ALL PAGES
-   Max width 768px
-=========================== */
 @media (max-width: 768px) {
 
   /* ---------------------------
@@ -635,11 +631,12 @@ caption {
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 auto !important;
-    padding: 0 1rem !important;
+    padding: 0 1rem !important; /* reduced margins */
+    box-sizing: border-box;
   }
 
   /* ---------------------------
-     Text Containers
+     Text Wrapping
   --------------------------- */
   p, li, h1, h2, h3,
   .bio, .education, .media,
@@ -648,26 +645,51 @@ caption {
     max-width: 100% !important;
     overflow-wrap: break-word !important;
     word-break: break-word !important;
+    white-space: normal !important; /* important to prevent cutting off */
   }
 
-  p { font-size: 0.9rem !important; line-height: 1.4; }
+  /* ---------------------------
+     Headings & Paragraphs
+  --------------------------- */
+  p { font-size: 1rem !important; line-height: 1.4; }
   h1 { font-size: 2rem !important; line-height: 1.2; }
   h2 { font-size: 1.5rem !important; line-height: 1.3; }
   h3 { font-size: 1.2rem !important; line-height: 1.3; }
 
   /* ---------------------------
-     Links & Buttons
+     Images & Videos
   --------------------------- */
-  a { word-break: break-word; overflow-wrap: anywhere; }
+  img, video, .profile-image, .resume-video,
+  .project-media img.videothumbnail,
+  .canva-logo, .wevideo-logo, .miro-logo {
+    width: 100% !important;        /* scale images to container */
+    max-width: 300px !important;   /* prevent huge logos */
+    height: auto !important;
+    display: block !important;
+    margin: 1rem auto !important;
+  }
 
+  .profile-image, .resume-video {
+    max-width: 250px !important; /* smaller headshot/video */
+  }
+
+  .canva-logo, .wevideo-logo, .miro-logo {
+    max-width: 200px !important;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
+
+  /* ---------------------------
+     Buttons
+  --------------------------- */
   .resume-link, .hero-btn, .explore-btn {
     display: block !important;
     width: 90% !important;
-    max-width: 400px !important;
+    max-width: 300px !important;
     margin: 1rem auto !important;
     text-align: center;
     padding: 10px 0 !important;
-    font-size: 1.2rem !important;
+    font-size: 1rem !important;
     border-radius: 10px !important;
   }
 
@@ -679,6 +701,7 @@ caption {
     width: 100% !important;
     max-width: 100% !important;
     text-align: center !important;
+    margin: 0 auto !important;
   }
 
   .bio, .education, .media,
@@ -688,21 +711,6 @@ caption {
     margin: 0 auto !important;
     text-align: center !important;
   }
-
-  /* ---------------------------
-     Media (Images & Videos)
-  --------------------------- */
-  img, video, .profile-image, .resume-video,
-  .project-media img.videothumbnail,
-  .canva-logo, .wevideo-logo, .miro-logo {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    display: block !important;
-    margin: 1rem auto !important;
-  }
-
-  .resume-video { margin: 1rem auto !important; }
 
   /* ---------------------------
      Tables
@@ -724,25 +732,17 @@ caption {
     word-wrap: break-word !important;
   }
 
-  .edu-table thead { display: table-header-group !important; }
-
-  figcaption { font-size: 1rem !important; }
-
   /* ---------------------------
      Hero Sections
   --------------------------- */
   .hero, .index-hero, .about-hero, .Resources-hero, .project-hero {
-    padding: 3rem 1rem !important;
+    padding: 2rem 1rem !important;
     text-align: center !important;
   }
 
-  .hero h1 { font-size: 2.5rem !important; }
-  .hero h2 { font-size: 1.8rem !important; }
+  .hero h1 { font-size: 2rem !important; }
+  .hero h2 { font-size: 1.5rem !important; }
   .hero p  { font-size: 1rem !important; }
-
-  .Resources-hero h1 { font-size: 2rem !important; line-height: 1.2; }
-  .Resources-hero h2 { font-size: 1.5rem !important; line-height: 1.3; }
-  .Resources-hero p { font-size: 1rem !important; }
 
   /* ---------------------------
      Footer
