@@ -697,12 +697,34 @@ caption {
   /* ---------------------------
      Project Page
   --------------------------- */
-  /* Lists*/
+/* ---------------------------
+     Project Page Container
+     Switch to single column
+  --------------------------- */
+  .project-section {
+    display: block !important; /* stack everything vertically */
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+    padding: 0 1rem !important;
+    margin: 0 auto !important;
+  }
+
+  .project-content, .project-media {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+
+  /* ---------------------------
+     Lists inside Project Content
+  --------------------------- */
   .project-content ul {
     margin-left: 0.5rem !important; /* reduced indent */
     padding-left: 1rem !important;
     font-size: 0.9rem !important;
-    text-align: left !important;
+    text-align: left !important; /* keep left-aligned */
   }
 
   .project-content li {
@@ -710,33 +732,36 @@ caption {
     margin-bottom: 0.5rem !important;
   }
 
-  /* Media */
+  /* ---------------------------
+     Project Media
+  --------------------------- */
   .project-media {
     display: flex !important;
-    flex-direction: column !important;
+    flex-direction: column !important; /* vertical stack */
     align-items: center !important;
     gap: 0.5rem !important; /* reduced spacing */
   }
 
   .project-media img.videothumbnail {
     width: 90% !important;
-    max-width: 250px !important; /* smaller than before */
+    max-width: 250px !important;
     height: auto !important;
     margin: 0.5rem auto !important;
   }
 
   .project-media img {
     width: 80% !important;
-    max-width: 150px !important; /* smaller than before */
+    max-width: 150px !important;
     height: auto !important;
     margin: 0.5rem auto !important;
   }
-    /* ---------------------------
+
+  /* ---------------------------
      Stickers / Logos
   --------------------------- */
   .canva-logo, .wevideo-logo, .miro-logo {
-    width: 40% !important; /* reduced from 50-70% */
-    max-width: 80px !important; /* smaller than before */
+    width: 40% !important; 
+    max-width: 80px !important;
     height: auto !important;
     margin: 0.5rem auto !important;
   }
@@ -745,12 +770,11 @@ caption {
      Subject Images (if any)
   --------------------------- */
   .subject img {
-    width: 30% !important; /* smaller */
+    width: 30% !important;
     max-width: 50px !important;
     height: auto !important;
     margin: 0 auto !important;
   }
-
   /* ---------------------------
      Hero Sections
   --------------------------- */
