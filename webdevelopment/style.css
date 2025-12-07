@@ -636,15 +636,14 @@ caption {
     padding: 0 1rem !important;
     box-sizing: border-box !important;
     overflow-wrap: break-word !important;
-    word-break: break-word !important;
   }
 
 /* Text */
-  p, li, h1, h2, h3, .bio, .education, .media, .project-content, .project-media {
-    max-width: 100% !important;
-    overflow-wrap: break-word !important;
-    word-break: break-word !important;
-  }
+p, li, h1, h2, h3, .bio, .education, .media, .project-content, .project-media {
+  max-width: 100% !important;
+  overflow-wrap: anywhere !important;
+  word-break: normal !important; 
+}
 
   p { font-size: 0.9rem !important; line-height: 1.4 !important; }
   li { font-size: 0.9rem !important; }
@@ -831,5 +830,8 @@ caption {
   }
 
   footer img { width: 18px !important; height: auto !important; }
-  footer span { font-size: 0.85rem !important; word-break: break-word !important; }
+  footer span { 
+  font-size: 0.85rem !important; 
+  word-break: normal !important;  
+}
 }
