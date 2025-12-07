@@ -113,15 +113,15 @@ section:not(.hero) {
 }
 
 .index-hero {
-  background-image: url('hero.jpg.jpg');
+  background-image: url('hero.jpg');
 }
 
 .about-hero {
-  background-image: url('about.jpg.jpg');
+  background-image: url('about.jpg');
 }
 
 .Resources-hero {
-  background-image: url('resources.jpg.jpg');
+  background-image: url('resources.jpg');
 }
 
 .project-hero {
