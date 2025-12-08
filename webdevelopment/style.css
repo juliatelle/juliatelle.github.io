@@ -687,21 +687,35 @@ footer {
   transition: transform 0.3s ease;
 }
 
-/* Animation*/
+/* Hover animation*/
 .contact-item:hover {
   transform: translateY(-5px);
 }
 
+/*Glow & hover */
 .footer-icon {
   width: 24px;
   height: 24px;
   transition: transform 0.3s ease, filter 0.3s ease;
+
+  /* Glow effect */
+  animation: icon-glow 1.5s infinite alternate;
+}
+
+/* Glow keyframes */
+@keyframes icon-glow {
+  from {
+    filter: drop-shadow(0 0 5px #29ADB2);
+  }
+  to {
+    filter: drop-shadow(0 0 15px #0766AD);
+  }
 }
 
 /* Hover effect */
 .contact-item:hover .footer-icon {
   transform: scale(1.2);
-  filter: brightness(1.2);
+  filter: brightness(1.2) drop-shadow(0 0 15px #0766AD);
 }
 
 /*Mobile Footer*/

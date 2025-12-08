@@ -19,42 +19,37 @@ Description: This page allows users to check my sources and learn more about the
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 </head>
 
-
 <body>
 <!--Header-->
 <header>
-<img src="logo.jpg" alt="Logo" class="logo">
+  <img src="logo.jpg" alt="Logo" class="logo">
 
+  <!-- Mobile Hamburger Menu -->
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="hamburger">☰</label>
 
-<!-- Mobile Hamburger Menu -->
-<input type="checkbox" id="menu-toggle">
-<label for="menu-toggle" class="hamburger">☰</label>
+  <!-- Navigation -->
+  <nav class="menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
 
+      <li class="dropdown">
+        <a href="project.html">Content ▼</a>
+        <ul class="dropdown-content">
+          <li><a href="#canva">Canva</a></li>
+          <li><a href="#wevideo">WeVideo</a></li>
+          <li><a href="#miro">Miro</a></li>
+        </ul>
+      </li>
 
-<!-- Navigation -->
-<nav class="menu">
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-
-
-<li class="dropdown">
-<a href="project.html">Content ▼</a>
-<ul class="dropdown-content">
-<li><a href="#canva">Canva</a></li>
-<li><a href="#wevideo">WeVideo</a></li>
-<li><a href="#miro">Miro</a></li>
-</ul>
-</li>
-
-
-<li><a href="Resources.html">Resources</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-</nav>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 </header>
 
-
+<main>
 <!--Hero-->
 <section class="hero Resources-hero">
 <h1>Resources</h1>
@@ -83,6 +78,7 @@ in their curriculum that promote creativity and opportunities to develop digital
 <p>Prothero, A. (2023, July 11). <i>What podcasts did for student engagement in these schools.</i> Education Week. <a href="https://www.edweek.org/technology/what-podcasts-did-for-student-engagement-in-these-schools/2023/07" target="_blank">https://www.edweek.org/technology/what-podcasts-did-for-student-engagement-in-these-schools/2023/07</a></p>
 <p><i>Video projects for educators - free assignment ideas.</i> WeVideo. (n.d.). <a href="https://www.wevideo.com/education/video-projects" target="_blank">https://www.wevideo.com/education/video-projects</a></p>
 </section>
+</main>
 
 <footer>
   <div class="footer-container">
@@ -102,8 +98,6 @@ in their curriculum that promote creativity and opportunities to develop digital
     </div>
   </div>
 </footer>
-
-
 
 </body>
 </html>

@@ -98,6 +98,7 @@ header {
   }
 
   .menu {
+    display: none; 
     position: absolute;
     top: 90px;
     left: 0;
@@ -105,12 +106,14 @@ header {
     background-color: #29ADB2;
     border-radius: 8px;
     overflow: hidden;
+    z-index: 1000;
   }
 
-  #menu-toggle:checked + .menu {
-    max-height: 1000px; 
+  /* Show menu when hamburger is checked */
+  #menu-toggle:checked ~ .menu {
+    display: flex;
+    flex-direction: column;
   }
-
 
   .menu ul {
     flex-direction: column;
@@ -127,14 +130,11 @@ header {
     font-size: 1.2rem;
     display: block;
     text-align: left;
-    font-family: Roboto, sans-serif;
   }
 
   .menu a:hover {
     background-color: #0766AD;
-    color: white;
   }
-
 
   .menu ul li ul {
     display: none;
@@ -143,11 +143,7 @@ header {
     padding-left: 15px;
   }
 
-  .menu ul li .dropdown-content {
-    display: none;
+  .menu ul li:hover > ul {
+    display: block; 
   }
-
-  
-  #menu-toggle:checked + .menu ul li .dropdown-content {
-    display: block;
-  }
+}
