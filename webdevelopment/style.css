@@ -761,3 +761,42 @@ footer {
     gap: 20px;
   }
 }
+
+/* FIX MOBILE MENU */
+@media (max-width: 768px) {
+
+  /* hide menu until hamburger is clicked */
+  .menu {
+    display: none !important;
+    max-height: 0;
+    overflow: hidden;
+    background-color: #29ADB2;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  /* reveal menu when checkbox clicked */
+  #menu-toggle:checked + .hamburger + .menu {
+    display: block !important;
+    max-height: 600px;
+  }
+
+  /* vertical list */
+  .menu ul {
+    display: block !important;
+    padding: 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 2rem;
+    background: #C5E898;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 3px solid #29ADB2;
+  }
+}
