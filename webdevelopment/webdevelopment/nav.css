@@ -82,19 +82,22 @@ header {
 }
 
 /* ---------------- MOBILE ---------------- */
+/* ---------------- MOBILE ---------------- */
 @media (max-width: 768px) {
-
-  /* Stack logo + hamburger */
+  /* Header: stack logo + hamburger */
   header {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 10px;
     padding: 20px;
   }
 
+  /* Hamburger toggle */
   .hamburger {
     display: block;
+    width: 100%;
+    text-align: right;     
     font-size: 2rem;
     cursor: pointer;
     background-color: #C5E898;
@@ -103,9 +106,10 @@ header {
     border: 3px solid #29ADB2;
   }
 
+  /* Main menu */
   .menu {
-    display: block !important;  /* override desktop flex */
-    max-height: 0;              /* collapse by default */
+    display: block !important;  
+    max-height: 0;              
     overflow: hidden;
     transition: max-height 0.3s ease;
     width: 100%;
@@ -115,33 +119,36 @@ header {
   }
 
   #menu-toggle:checked + .menu {
-    max-height: 1000px;         /* expand menu */
+    max-height: 1000px;
   }
 
+  /* Vertical menu list */
   .menu ul {
-    display: block;              /* vertical menu */
+    display: block;
     margin: 0;
     padding: 0;
     list-style: none;
   }
 
   .menu a, .menu label {
+    width: 100%;
+    display: block;
     color: white;
     background-color: #29ADB2;
-    border: none;
     padding: 15px;
     font-size: 1.2rem;
     text-align: left;
+    border: none;
+    cursor: pointer;
   }
 
   .menu a:hover, .menu label:hover {
     background-color: #0766AD;
-    color: white;
   }
 
-  /* Mobile dropdowns */
+  /* ---------------- MOBILE DROPDOWNS ---------------- */
   .menu ul li input {
-    display: none;  /* hide nested checkbox */
+    display: none; 
   }
 
   .menu ul li ul.dropdown-content {
@@ -156,6 +163,19 @@ header {
   }
 
   .menu ul li input:checked + label + .dropdown-content {
-    max-height: 500px;
+    max-height: 500px; 
+  }
+
+  .menu ul li ul.dropdown-content li a {
+    color: white;
+    background-color: #0766AD;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+  }
+
+  .menu ul li ul.dropdown-content li a:hover {
+    background-color: #0766AD;
+    filter: brightness(1.2);
   }
 }
