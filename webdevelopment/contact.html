@@ -20,29 +20,34 @@ Description: This page allows users to send me a message.
 </head>
 
 <body>
-<!--Header-->
- <header>
+<header>
   <img src="logo.jpg" alt="Logo" class="logo">
-<!-- Hamburger toggle -->
-<input type="checkbox" id="menu-toggle">
-<label for="menu-toggle" class="hamburger">☰</label>
-<!-- Navigation Menu -->
-    <nav class="menu">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li class="dropdown">
-          <a href="project.html">Content ▼</a>
-          <ul class="dropdown-content">
-            <li><a href="#canva">Canva</a></li>
-            <li><a href="#wevideo">WeVideo</a></li>
-            <li><a href="#miro">Miro</a></li>
-          </ul>
-        </li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+
+  <!-- Hamburger toggle for mobile -->
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="hamburger">☰</label>
+
+  <!-- Navigation Menu -->
+  <nav class="menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+
+      <!-- Dropdown -->
+      <li class="dropdown">
+        <input type="checkbox" id="content-toggle">
+        <label for="content-toggle">Content ▼</label>
+        <ul class="dropdown-content">
+          <li><a href="#canva">Canva</a></li>
+          <li><a href="#wevideo">WeVideo</a></li>
+          <li><a href="#miro">Miro</a></li>
+        </ul>
+      </li>
+
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 </header>
 
 <!--Form-->
