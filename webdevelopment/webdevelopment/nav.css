@@ -7,23 +7,27 @@ header {
   padding: 30px 50px;
   background-color: #C5E898;
   border-bottom: 3px solid #29ADB2;
-  position: relative;
 }
 
 .logo {
   height: 150px;
   width: auto;
+  flex-shrink: 0;
+}
+
+#menu-toggle {
+  display: none; /* hide checkbox */
 }
 
 .menu ul {
   list-style: none;
-  display: flex; /* horizontal on desktop */
+  display: flex;           
   gap: 60px;
   margin: 0;
   padding: 0;
 }
 
-.menu a, .menu label {
+.menu a {
   text-decoration: none;
   color: #0766AD;
   font-weight: bold;
@@ -34,137 +38,63 @@ header {
   background-color: white;
   display: block;
   font-family: "Montserrat", sans-serif;
-  cursor: pointer;
 }
 
-.menu a:hover, .menu label:hover {
+.menu a:hover {
   background-color: #29ADB2;
   color: white;
-}
-
-/* Desktop dropdown */
-.menu ul li {
-  position: relative;
-}
-
-.menu ul li ul.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: white;
-  padding: 0;
-  margin: 0;
-  min-width: 150px;
-  border-radius: 6px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.menu ul li:hover > ul.dropdown-content {
-  display: block;
-}
-
-.menu ul li ul.dropdown-content li a {
-  padding: 10px 15px;
-  border: none;
-  border-bottom: 1px solid #C5E898;
-}
-
-.menu ul li ul.dropdown-content li a:hover {
-  background-color: blue;
-  color: white;
-}
-
-/* Hide all checkboxes */
-#menu-toggle, .dropdown input {
-  display: none;
 }
 
 /* ---------------- MOBILE ---------------- */
 @media (max-width: 768px) {
   header {
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
     padding: 20px;
   }
 
-  /* Hamburger icon */
   .hamburger {
     display: block;
-    width: 100%;
-    text-align: right;
     font-size: 2rem;
     cursor: pointer;
-    background-color: #C5E898;
     padding: 10px 20px;
     border-radius: 8px;
     border: 3px solid #29ADB2;
+    background-color: #C5E898;
   }
 
-  /* Hide menu initially */
+  /* Hide menu by default */
   .menu {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
+    display: none;
     width: 100%;
-    background-color: #29ADB2;
-    border-radius: 8px;
+    margin-top: 10px;
   }
 
-  /* Show menu when hamburger is clicked */
-  #menu-toggle:checked ~ .menu {
-    max-height: 1000px;
+  /* Show menu when hamburger is checked */
+  #menu-toggle:checked + .hamburger + .menu {
+    display: block;
   }
 
-  /* Stack menu vertically */
   .menu ul {
     display: block;
-    margin: 0;
     padding: 0;
+    margin: 0;
+    list-style: none;
   }
 
-  .menu a, .menu label {
+  .menu a {
     display: block;
     width: 100%;
     padding: 15px;
-    font-size: 1.2rem;
-    text-align: left;
     color: white;
     background-color: #29ADB2;
     border: none;
+    text-align: left;
   }
 
-  .menu a:hover, .menu label:hover {
+  .menu a:hover {
     background-color: #0766AD;
-  }
-
-  /* Mobile dropdown */
-  .menu ul li ul.dropdown-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    flex-direction: column;
-    padding-left: 15px;
-    background-color: #0766AD;
-    border-radius: 6px;
-    margin-top: 5px;
-  }
-
-  /* Expand dropdown when its checkbox is checked */
-  .menu ul li input:checked + label + .dropdown-content {
-    max-height: 500px;
-  }
-
-  .menu ul li ul.dropdown-content li a {
-    padding: 12px 15px;
-    font-size: 1rem;
-    color: white;
-    background-color: #0766AD;
-    border-radius: 5px;
-  }
-
-  .menu ul li ul.dropdown-content li a:hover {
-    filter: brightness(1.2);
   }
 }
