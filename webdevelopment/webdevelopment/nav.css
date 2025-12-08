@@ -1,4 +1,4 @@
-/* HEADER */
+/* HEADER - Desktop */
 header {
   display: flex;
   align-items: center;
@@ -100,65 +100,48 @@ header {
 
 /* MOBILE NAVIGATION */
 @media (max-width: 768px) {
-  /* Header tweaks */
+
   header {
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    position: relative; /* for absolute menu */
+    position: relative;
   }
 
-  /* Show hamburger */
   .hamburger {
     display: block;
     margin-top: 10px;
-    font-size: 2.2rem;
-    cursor: pointer;
-    background-color: #C5E898;
-    padding: 10px 20px;
-    border-radius: 8px;
-    border: 3px solid #29ADB2;
-    z-index: 50;
+    z-index: 100;
   }
 
-  /* Menu container */
+  /* Mobile menu */
   .menu {
-    display: flex;                /* always flex for animation */
-    flex-direction: column;
-    width: 100%;
     position: absolute;
-    top: 100%;                    /* just below header */
+    top: 100%;
     left: 0;
     right: 0;
     background-color: #29ADB2;
+    flex-direction: column;
     overflow: hidden;
-    max-height: 0;                /* collapsed by default */
-    transition: max-height 0.3s ease-in-out;
-    z-index: 40;
+    max-height: 0;             /* collapsed by default */
+    transition: max-height 0.5s ease-in-out;
+    z-index: 50;
   }
 
-  /* Toggle menu open */
-  #menu-toggle:checked + .hamburger + .menu {
-    max-height: 1000px;           /* enough height to show menu */
-  }
-
-  /* Menu list */
   .menu ul {
-    display: block;
-    margin: 0;
+    flex-direction: column;
     padding: 0;
+    margin: 0;
   }
 
   .menu li {
     border-bottom: 1px solid rgba(255,255,255,0.2);
   }
 
-  /* Menu links */
   .menu a {
     display: block;
+    padding: 15px 20px;
     color: white;
     font-size: 1.2rem;
-    padding: 15px 20px;
     text-decoration: none;
     background-color: #29ADB2;
   }
@@ -167,8 +150,13 @@ header {
     background-color: #0766AD;
   }
 
-  /* Dropdown inside mobile menu (optional) */
+  /* TOGGLE MENU */
+  #menu-toggle:checked ~ .menu {
+    max-height: 500px; /* adjust if your menu is bigger */
+  }
+
+  /* Hide desktop dropdowns on mobile */
   .menu ul li ul {
-    display: none; /* hide nested dropdowns on mobile */
+    display: none !important;
   }
 }
