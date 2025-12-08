@@ -94,7 +94,7 @@ header {
   header {
     flex-wrap: wrap;
     justify-content: space-between;
-    position: relative; /* ensure absolute menu is relative to header */
+    position: relative;
   }
 
   .hamburger {
@@ -109,15 +109,14 @@ header {
   }
 
   .menu {
-    display: none; /* hide menu initially */
+    display: none;
     flex-direction: column;
     width: 100%;
     background-color: #29ADB2;
     position: absolute;
-    top: 100%; /* directly below header */
+    top: 100%;
     left: 0;
     z-index: 40;
-    border-radius: 0;
   }
 
   #menu-toggle:checked + .hamburger + .menu {
@@ -140,5 +139,19 @@ header {
 
   .menu a:hover {
     background-color: #0766AD;
+  }
+
+  /* Dropdown content inside mobile menu */
+  .dropdown-content {
+    display: block; /* always visible inside hamburger */
+    flex-direction: column;
+    padding-left: 15px;
+    background-color: #0766AD;
+  }
+
+  .dropdown-content li a {
+    padding: 10px 20px;
+    color: white;
+    font-size: 1.1rem;
   }
 }
