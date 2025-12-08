@@ -20,16 +20,15 @@ header {
   display: none;
 }
 
-/* Desktop Menu */
 .menu ul {
   list-style: none;
-  display: flex;           /* desktop flex row */
+  display: flex;           /* Desktop flex row */
   gap: 60px;
   margin: 0;
   padding: 0;
 }
 
-.menu a {
+.menu a, .menu label {
   text-decoration: none;
   color: #0766AD;
   font-weight: bold;
@@ -40,9 +39,10 @@ header {
   background-color: white;
   display: block;
   font-family: "Montserrat", sans-serif;
+  cursor: pointer;
 }
 
-.menu a:hover {
+.menu a:hover, .menu label:hover {
   background-color: #29ADB2;
   color: white;
 }
@@ -84,9 +84,10 @@ header {
 /* ---------------- MOBILE ---------------- */
 @media (max-width: 768px) {
 
+  /* Stack logo + hamburger */
   header {
     display: flex;
-    flex-direction: column;    /* stack logo + hamburger vertically */
+    flex-direction: column;
     align-items: flex-start;
     gap: 10px;
     padding: 20px;
@@ -103,8 +104,8 @@ header {
   }
 
   .menu {
-    display: block;          /* override desktop flex */
-    max-height: 0;           /* collapse menu */
+    display: block !important;  /* override desktop flex */
+    max-height: 0;              /* collapse by default */
     overflow: hidden;
     transition: max-height 0.3s ease;
     width: 100%;
@@ -114,18 +115,17 @@ header {
   }
 
   #menu-toggle:checked + .menu {
-    max-height: 1000px;      /* expand menu */
+    max-height: 1000px;         /* expand menu */
   }
 
   .menu ul {
-    display: block;           /* vertical menu */
-    flex-direction: column;
+    display: block;              /* vertical menu */
     margin: 0;
     padding: 0;
     list-style: none;
   }
 
-  .menu a {
+  .menu a, .menu label {
     color: white;
     background-color: #29ADB2;
     border: none;
@@ -134,12 +134,16 @@ header {
     text-align: left;
   }
 
-  .menu a:hover {
+  .menu a:hover, .menu label:hover {
     background-color: #0766AD;
     color: white;
   }
 
   /* Mobile dropdowns */
+  .menu ul li input {
+    display: none;  /* hide nested checkbox */
+  }
+
   .menu ul li ul.dropdown-content {
     max-height: 0;
     overflow: hidden;
@@ -147,10 +151,11 @@ header {
     flex-direction: column;
     padding-left: 15px;
     background-color: #0766AD;
+    border-radius: 6px;
+    margin-top: 5px;
   }
 
-  .menu ul li.dropdown:has(:focus-within) > ul,
-  .menu ul li.dropdown:hover > ul {
+  .menu ul li input:checked + label + .dropdown-content {
     max-height: 500px;
   }
 }
