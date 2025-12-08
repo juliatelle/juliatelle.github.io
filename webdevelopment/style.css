@@ -559,7 +559,6 @@ caption {
   height: auto;
 }
 
-
 .canva-logo {
   width: 350px;      
   height: auto;
@@ -567,14 +566,12 @@ caption {
   padding-bottom: 150px;
 }
 
-
 .wevideo-logo {
   width: 350px;      
   height: auto;
   padding-top: 50px;
   padding-bottom: 150px;
 }
-
 
 .miro-logo {
   width: 250px;      
@@ -591,20 +588,17 @@ caption {
     margin-top: 20px;
   }
 
-
   .subject img {
     width: 80px;
     height: 80px;
     margin-right: 10px;
   }
 
-
   .subject-title {
     font-weight: bold;
     font-size: 1.4em;
     font-family: Roboto, sans-serif;
   }
-
 
   ul {
     margin-top: 5px;
@@ -623,7 +617,6 @@ caption {
   padding: 20px;
 }
 
-
 .project-media {
   display: flex;
   flex-direction: column;
@@ -632,52 +625,43 @@ caption {
   align-items: center;
 }
 
-
 .project-media img.videothumbnail {
   width: 100%;
   max-width: 700px;
 }
-
 
 .project-media img {
   max-width: 350px;
   height: auto;
 }
 
-
 .project-content h2 {
   text-align: left;
 }
 
-
 .project-content h3 {
   text-align: left;
 }
-
 
 .project-content p {
   text-align: left;
   margin-bottom: 1em;
 }
 
-
 .project-content ul {
   margin-left: 20px;
 }
-
 
 .project-content li {
   font-size: 18px;
   margin-bottom: 6px;
 }
 
-
 .subject {
   display: flex;
   align-items: center;
   margin-top: 20px;
 }
-
 
 .subject img {
   width: 50px;
@@ -698,24 +682,20 @@ caption {
     text-align: center;
   }
 
-
   .project-content h2,
   .project-content h3,
   .project-content p {
     text-align: center;
   }
 
-
   .project-media img.videothumbnail {
     max-width: 90%;
   }
-
 
   .subject {
     justify-content: center;
   }
 }
-
 
 /*Footer*/
 footer {
