@@ -109,18 +109,23 @@ header {
   }
 
   .menu {
-    display: none;
+    display: none; /* hide menu initially */
     flex-direction: column;
-    width: 100%;
     background-color: #29ADB2;
     position: absolute;
-    top: 100%;
+    top: 100%; /* below header */
     left: 0;
+    width: 200px; /* control menu width */
+    max-height: 0; /* collapse menu */
+    overflow: hidden; /* prevent it from taking full screen */
+    transition: max-height 0.3s ease-in-out;
     z-index: 40;
+    border-radius: 0;
   }
 
   #menu-toggle:checked + .hamburger + .menu {
     display: flex;
+    max-height: 500px; /* adjust depending on menu items */
   }
 
   .menu ul {
@@ -140,18 +145,5 @@ header {
   .menu a:hover {
     background-color: #0766AD;
   }
-
-  /* Dropdown content inside mobile menu */
-  .dropdown-content {
-    display: block; /* always visible inside hamburger */
-    flex-direction: column;
-    padding-left: 15px;
-    background-color: #0766AD;
-  }
-
-  .dropdown-content li a {
-    padding: 10px 20px;
-    color: white;
-    font-size: 1.1rem;
-  }
 }
+
