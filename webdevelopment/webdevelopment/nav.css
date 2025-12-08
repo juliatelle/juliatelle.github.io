@@ -1,11 +1,11 @@
-/* ---------------- DESKTOP NAVIGATION ---------------- */
+/* ---------------- DESKTOP ---------------- */
 header {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  background-color: #C5E898;
   gap: 150px;
   padding: 30px 50px;
+  background-color: #C5E898;
   border-bottom: 3px solid #29ADB2;
   position: relative;
 }
@@ -16,15 +16,14 @@ header {
   flex-shrink: 0;
 }
 
-/* Hide checkbox by default */
 #menu-toggle {
   display: none;
 }
 
-/* Desktop menu */
+/* Desktop Menu */
 .menu ul {
   list-style: none;
-  display: flex;
+  display: flex;           /* desktop flex row */
   gap: 60px;
   margin: 0;
   padding: 0;
@@ -48,7 +47,7 @@ header {
   color: white;
 }
 
-/* Dropdowns - Desktop */
+/* Dropdown - Desktop */
 .menu ul li {
   position: relative;
 }
@@ -82,10 +81,17 @@ header {
   display: block;
 }
 
-/* ---------------- MOBILE NAVIGATION ---------------- */
+/* ---------------- MOBILE ---------------- */
 @media (max-width: 768px) {
 
-  /* Show hamburger */
+  header {
+    display: flex;
+    flex-direction: column;    /* stack logo + hamburger vertically */
+    align-items: flex-start;
+    gap: 10px;
+    padding: 20px;
+  }
+
   .hamburger {
     display: block;
     font-size: 2rem;
@@ -96,27 +102,23 @@ header {
     border: 3px solid #29ADB2;
   }
 
-  /* Collapse menu by default */
   .menu {
-    max-height: 0;
+    display: block;          /* override desktop flex */
+    max-height: 0;           /* collapse menu */
     overflow: hidden;
     transition: max-height 0.3s ease;
-    position: absolute;
-    top: 90px;
-    left: 0;
     width: 100%;
     background-color: #29ADB2;
     border-radius: 8px;
     z-index: 999;
   }
 
-  /* Expand menu when checkbox checked */
   #menu-toggle:checked + .menu {
-    max-height: 1000px;
+    max-height: 1000px;      /* expand menu */
   }
 
-  /* Vertical menu for mobile */
   .menu ul {
+    display: block;           /* vertical menu */
     flex-direction: column;
     margin: 0;
     padding: 0;
@@ -129,7 +131,6 @@ header {
     border: none;
     padding: 15px;
     font-size: 1.2rem;
-    display: block;
     text-align: left;
   }
 
@@ -138,7 +139,7 @@ header {
     color: white;
   }
 
-  /* Mobile dropdowns - collapse by default */
+  /* Mobile dropdowns */
   .menu ul li ul.dropdown-content {
     max-height: 0;
     overflow: hidden;
@@ -148,7 +149,6 @@ header {
     background-color: #0766AD;
   }
 
-  /* Expand dropdown on tap/focus */
   .menu ul li.dropdown:has(:focus-within) > ul,
   .menu ul li.dropdown:hover > ul {
     max-height: 500px;
