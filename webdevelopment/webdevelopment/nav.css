@@ -82,14 +82,19 @@ header {
 }
 
 /* ---------------- MOBILE ---------------- */
+/* ---------------- MOBILE ---------------- */
 @media (max-width: 768px) {
+
+  /* Header stacked */
   header {
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
     padding: 20px;
   }
 
+  /* Hamburger icon */
   .hamburger {
     display: block;
     width: 100%;
@@ -102,6 +107,13 @@ header {
     border: 3px solid #29ADB2;
   }
 
+  /* Hide checkboxes */
+  #menu-toggle,
+  .dropdown input {
+    display: none;
+  }
+
+  /* Main menu - collapsed by default */
   .menu {
     max-height: 0;
     overflow: hidden;
@@ -112,18 +124,20 @@ header {
   }
 
   /* Expand menu when hamburger checked */
-  #menu-toggle:checked ~ .menu {
-    max-height: 1000px;
+  #menu-toggle:checked + label + .menu {
+    max-height: 1000px; /* plenty for all items */
   }
 
+  /* Menu list vertical */
   .menu ul {
-    display: block;   /* vertical stacking */
+    display: block;
     margin: 0;
     padding: 0;
     list-style: none;
   }
 
-  .menu a, .menu label {
+  .menu a,
+  .menu label {
     width: 100%;
     display: block;
     padding: 15px;
@@ -132,9 +146,11 @@ header {
     color: white;
     background-color: #29ADB2;
     border: none;
+    cursor: pointer;
   }
 
-  .menu a:hover, .menu label:hover {
+  .menu a:hover,
+  .menu label:hover {
     background-color: #0766AD;
   }
 
