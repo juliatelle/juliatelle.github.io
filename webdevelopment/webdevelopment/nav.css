@@ -101,17 +101,19 @@ header {
   }
 
   .menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
     position: absolute;
     top: 90px;
     left: 0;
     width: 100%;
     background-color: #29ADB2;
     border-radius: 8px;
-    overflow: hidden;
   }
 
   #menu-toggle:checked + .menu {
-    max-height: 1000px;
+    max-height: 1000px; /* expand menu */
   }
 
   .menu ul {
@@ -137,18 +139,19 @@ header {
     color: white;
   }
 
+  /* Mobile dropdowns */
   .menu ul li ul {
-    display: none;
-    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
     background-color: #0766AD;
+    flex-direction: column;
     padding-left: 15px;
   }
 
-  .menu ul li .dropdown-content {
-    display: none;
-  }
-
-  #menu-toggle:checked + .menu ul li .dropdown-content {
-    display: block;
+  /* Use :has() if supported */
+  .menu ul li:has(:focus-within) > ul,
+  .menu ul li:has(:hover) > ul {
+    max-height: 500px; /* expand submenu */
   }
 }
