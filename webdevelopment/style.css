@@ -376,7 +376,7 @@ input[type="submit"]:hover {
 .bio p {
   margin-bottom: 1em;
   font-family: "Lexend", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   line-height: 1.6;
 }
 
@@ -387,21 +387,22 @@ input[type="submit"]:hover {
   align-items: center;
   text-align: center;
   margin-top: 0;
+  padding: 20px;          
 }
 
 .profile-image {
   width: 100%;
-  max-width: 250px;
+  max-width: 350px;       
   border-radius: 10px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px;
+  margin-bottom: 30px;    
 }
 
 .resume-video {
   width: 100%;
-  max-width: 250px;
+  max-width: 600px;      
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;    
 }
 
 .resume-link {
@@ -452,8 +453,63 @@ input[type="submit"]:hover {
   background-color: #B8E3E9;
 }
 
+/* TABLE STYLING*/
+.edu-table {
+  display: table;
+  width: auto;
+  max-width: 1000px; 
+  margin: 20px auto;
+  border: 3px solid #0766AD;
+  font-size: 1.3rem;
+  font-family: Roboto, sans-serif;
+}
 
-/* About Page Mobile*/
+/* Header Section */
+.edu-table thead {
+  background-color: #0766AD;
+  color: white;
+}
+
+
+.edu-table th,
+.edu-table td {
+  padding: 10px;
+  border: 1px solid black;
+  text-align: left;
+}
+
+
+/* 1st & 3rd rows  */
+.edu-table tbody tr:nth-child(1),
+.edu-table tbody tr:nth-child(3) {
+  background-color: #B8E3E9;
+}
+
+/*  Alternating Row Colors */
+.edu-table tbody tr:nth-child(even) {
+  background-color: #C5E898;
+}
+
+
+/* Figure caption styling */
+figure {
+  margin: 0 0 20px 0;
+}
+
+figcaption {
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family:Roboto, sans-serif;
+  margin-bottom: 8px;
+}
+
+/* Hide table caption*/
+caption {
+  position: absolute;
+  left: -9999px;
+}
+
+/* About Page Mobile */
 @media (max-width: 768px) {
   .about-grid {
     grid-template-columns: 1fr;
@@ -463,6 +519,7 @@ input[type="submit"]:hover {
 
   .bio {
     text-align: center;
+    font-size: 1.6rem; /* larger bio text */
   }
 
   .media {
@@ -489,6 +546,10 @@ input[type="submit"]:hover {
     font-size: 0.9rem;
     display: block;
     overflow-x: auto;
+  }
+
+  figcaption {
+    font-size: 1rem;
   }
 }
 
@@ -650,80 +711,6 @@ input[type="submit"]:hover {
   }
 }
 
-
-/* TABLE STYLING*/
-.edu-table {
-  display: table;
-  width: auto;
-  max-width: 1000px; 
-  margin: 20px auto;
-  border: 3px solid #0766AD;
-  font-size: 1.3rem;
-  font-family: Roboto, sans-serif;
-}
-
-
-/* Header Section */
-.edu-table thead {
-  background-color: #0766AD;
-  color: white;
-}
-
-
-.edu-table th,
-.edu-table td {
-  padding: 10px;
-  border: 1px solid black;
-  text-align: left;
-}
-
-
-/* 1st & 3rd rows  */
-.edu-table tbody tr:nth-child(1),
-.edu-table tbody tr:nth-child(3) {
-  background-color: #B8E3E9;
-}
-
-
-/*  Alternating Row Colors */
-.edu-table tbody tr:nth-child(even) {
-  background-color: #C5E898;
-}
-
-
-/* Figure caption styling */
-figure {
-  margin: 0 0 20px 0;
-}
-
-
-figcaption {
-  font-size: 1.2rem;
-  font-weight: 600;
-  font-family:Roboto, sans-serif;
-  margin-bottom: 8px;
-}
-
-
-/* Hide table caption*/
-caption {
-  position: absolute;
-  left: -9999px;
-}
-
-
-/*  RESPONSIVE TABLE*/
-@media (max-width: 600px) {
-  .edu-table {
-    display: block;
-    overflow-x: auto;
-    font-size: 0.9rem;
-  }
-
-  figcaption {
-    font-size: 1rem;
-  }
-}
 
 /*Footer*/
 footer {
