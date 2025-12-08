@@ -1,3 +1,13 @@
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 /*HEADINGS, PARAGRAPHS, BLOCKQUOTE*/
 h1 {
   color: #0766AD;
@@ -347,10 +357,10 @@ input[type="submit"]:hover {
 }
 
 
-/*ABOUT PAGE*/
-.about {
+/*About Page*/
+.about-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2fr 1fr; /* bio | media */
   gap: 2rem;
   align-items: start;
   padding: 2rem;
@@ -358,75 +368,129 @@ input[type="submit"]:hover {
   margin: 0 auto;
 }
 
-
+/* Bio Section */
 .bio {
-  grid-column: 1/ 2;
-  align-items: right;
+  text-align: left;
 }
 
-
-.education {
-  grid-column: 1 / 2;
+.bio p {
+  margin-bottom: 1em;
+  font-family: "Lexend", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
-
+/* Media Section */
 .media {
-  grid-column: 2 / 2;
   display: flex;
   flex-direction: column;
-  align-items: right;
-  margin-top: 60px;
+  align-items: center;
+  text-align: center;
+  margin-top: 0;
 }
-
 
 .profile-image {
   width: 100%;
   max-width: 250px;
   border-radius: 10px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-  margin-bottom: 100px;
+  margin-bottom: 20px;
 }
-
 
 .resume-video {
+  width: 100%;
+  max-width: 250px;
   border-radius: 10px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
 }
-
 
 .resume-link {
   display: inline-block;
-  margin-top: 1rem;
+  margin-top: 10px;
   background-color: #0073e6;
   color: white;
   border-radius: 5px;
   font-weight: 500;
-  grid-column: 1 / 2;
+  padding: 10px 20px;
+  text-decoration: none;
 }
-
 
 .resume-link:hover {
   background-color: #005bb5;
 }
 
+/* Education Section */
+.education {
+  max-width: 1300px;
+  margin: 40px auto;
+  padding: 0 2rem;
+}
 
-/*ABOUT PAGE MOBILE LAYOUT*/
+.edu-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.edu-table th,
+.edu-table td {
+  border: 1px solid #0766AD;
+  padding: 10px;
+  text-align: left;
+}
+
+.edu-table thead {
+  background-color: #0766AD;
+  color: white;
+}
+
+.edu-table tbody tr:nth-child(even) {
+  background-color: #C5E898;
+}
+
+.edu-table tbody tr:nth-child(odd) {
+  background-color: #B8E3E9;
+}
+
+
+/* About Page Mobile*/
 @media (max-width: 768px) {
   .about-grid {
     grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1rem;
   }
 
+  .bio {
+    text-align: center;
+  }
 
   .media {
-    grid-column: 1 / 2;
+    margin-top: 20px;
+    text-align: center;
   }
 
+  .profile-image,
+  .resume-video {
+    max-width: 100%;
+    margin: 0 auto 20px;
+  }
 
-  .profile-image {
-    max-width: 250px;
+  .resume-link {
+    display: inline-block;
+    margin: 10px auto;
+  }
+
+  .education {
+    padding: 0 1rem;
+  }
+
+  .edu-table {
+    font-size: 0.9rem;
+    display: block;
+    overflow-x: auto;
   }
 }
-
 
 /*CONTENT VIDEO THUMBNAILS*/
   .videothumbnail {
