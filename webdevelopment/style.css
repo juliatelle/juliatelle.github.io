@@ -1,4 +1,4 @@
-/*HEADINGS, PARAGRAPHS, BLOCKQUOTE, & FOOTER*/
+/*HEADINGS, PARAGRAPHS, BLOCKQUOTE*/
 h1 {
   color: #0766AD;
   font-size: 36px;
@@ -57,19 +57,6 @@ blockquote {
   font-weight: 400;
   font-style: italic;
 }
-
-
-footer {
-color: black;
-  font-size: 16px;
-  font-family: "Lexend", sans-serif;
-display: block;
-clear: both;    
-width: 100%;      
-grid-column: 1 / -1;
-margin-top: 2rem;
-}
-
 
 /*HEROS*/
 .hero {
@@ -603,8 +590,9 @@ input[type="submit"]:hover {
 /* TABLE STYLING*/
 .edu-table {
   display: table;
-  width: 100%;
-  margin: 20px 0;
+  width: auto;
+  max-width: 1000px; 
+  margin: 20px auto;
   border: 3px solid #0766AD;
   font-size: 1.3rem;
   font-family: Roboto, sans-serif;
@@ -668,8 +656,58 @@ caption {
     font-size: 0.9rem;
   }
 
-
   figcaption {
     font-size: 1rem;
+  }
+}
+
+/*Footer*/
+footer {
+  background-color: #f2f2f2;  
+  padding: 20px 0;
+  font-family: "Lexend", sans-serif;
+  font-size: 16px;
+  color: black;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;   
+  align-items: center;       
+  gap: 50px;                 
+  flex-wrap: wrap;           
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Animation*/
+.contact-item:hover {
+  transform: translateY(-5px);
+}
+
+.footer-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover effect */
+.contact-item:hover .footer-icon {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+/*Mobile Footer*/
+@media (max-width: 600px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 20px;
   }
 }
