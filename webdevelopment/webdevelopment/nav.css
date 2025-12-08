@@ -9,18 +9,15 @@ header {
   border-bottom: 3px solid #29ADB2;
 }
 
-
 .logo {
   height: 150px;
   width: auto;
   flex-shrink: 0;
 }
 
-
 #menu-toggle {
   display: none;
 }
-
 
 .hamburger {
   display: none;
@@ -110,10 +107,11 @@ header {
     width: 100%;
     background-color: #29ADB2;
     border-radius: 8px;
+    z-index: 999;
   }
 
   #menu-toggle:checked + .menu {
-    max-height: 1000px; /* expand menu */
+    max-height: 1000px; /* show menu */
   }
 
   .menu ul {
@@ -131,7 +129,6 @@ header {
     font-size: 1.2rem;
     display: block;
     text-align: left;
-    font-family: Roboto, sans-serif;
   }
 
   .menu a:hover {
@@ -140,18 +137,17 @@ header {
   }
 
   /* Mobile dropdowns */
-  .menu ul li ul {
+  .menu ul li ul.dropdown-content {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
     background-color: #0766AD;
-    flex-direction: column;
     padding-left: 15px;
   }
 
-  /* Use :has() if supported */
-  .menu ul li:has(:focus-within) > ul,
-  .menu ul li:has(:hover) > ul {
-    max-height: 500px; /* expand submenu */
+  /* Toggle dropdown on click */
+  .menu ul li.dropdown:has(:focus-within) > ul,
+  .menu ul li.dropdown:hover > ul {
+    max-height: 500px;
   }
 }
