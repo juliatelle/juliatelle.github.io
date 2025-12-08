@@ -612,7 +612,7 @@ caption {
   }
 
 
- /*PROJECT PAGE LAYOUT*/
+ /*PROJECT PAGE*/
 .project-section {
   display: grid;
   grid-template-columns: 1fr 2fr;  
@@ -685,6 +685,11 @@ caption {
   margin-right: 10px;
 }
 
+.project-content h2 {
+  text-shadow: 2px 2px 8px rgba(41, 173, 178, 0.7); 
+  letter-spacing: 2px; 
+  color: #0766AD; 
+}
 
 /*PROJECT PAGE MOBILE*/
 @media (max-width: 768px) {
