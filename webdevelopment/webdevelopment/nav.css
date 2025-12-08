@@ -1,4 +1,4 @@
-/* HEADER */
+/* HEADER — DESKTOP */
 header {
   display: flex;
   align-items: center;
@@ -16,19 +16,17 @@ header {
   flex-shrink: 0;
 }
 
-/* Hide hamburger checkbox */
 #menu-toggle {
   display: none;
 }
 
-/* Hamburger default (hidden on desktop) */
 .hamburger {
   display: none;
   font-size: 2.2rem;
   cursor: pointer;
 }
 
-/* DESKTOP NAVIGATION */
+/*  DESKTOP NAVIGATION */
 .menu {
   display: block;
 }
@@ -92,28 +90,33 @@ header {
   color: white;
 }
 
-/* ================= MOBILE ================= */
+/* MOBILE */
 @media (max-width: 768px) {
 
-  /* Header adjusts */
   header {
-    justify-content: space-between;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
   }
 
-  /* Show hamburger */
+  .logo {
+    max-width: 180px;
+    height: auto;
+  }
+
   .hamburger {
     display: block;
     background-color: #C5E898;
     padding: 10px 20px;
     border-radius: 8px;
     border: 3px solid #29ADB2;
+    font-size: 2rem;
     z-index: 50;
   }
 
-  /* HIDE menu completely by default */
   .menu {
-    display: none !important;
+    display: none;
     flex-direction: column;
     width: 100%;
     background-color: #29ADB2;
@@ -126,16 +129,15 @@ header {
     z-index: 40;
   }
 
-  /* Override desktop horizontal layout */
   .menu ul {
-    display: block !important;
+    display: block;
     padding: 0;
     margin: 0;
+    list-style: none;
   }
 
-  /* Reveal menu when hamburger is checked */
   #menu-toggle:checked + .hamburger + .menu {
-    display: flex !important;
+    display: flex;
     max-height: 500px;
   }
 
@@ -151,7 +153,6 @@ header {
     background-color: #0766AD;
   }
 
-  /* Disable dropdown hover effect on mobile (keeps things simple) */
   .menu ul li ul {
     display: none !important;
   }
