@@ -12,12 +12,8 @@
     </div>
 
     <div class="contact-item">
-      <img src="user.png" alt="user icon">
-      <span>Julia Telle</span>
+      <span>2025 Julia Telle. All rights reserved.</span>
     </div>
-
-    <p>&copy; 2025 Julia Telle. All rights reserved.</p>
-
   </div>
 </footer>
 </body>
