@@ -7,6 +7,7 @@ header {
   padding: 30px 50px;
   background-color: #C5E898;
   border-bottom: 3px solid #29ADB2;
+  position: relative;
 }
 
 .logo {
@@ -15,16 +16,22 @@ header {
   flex-shrink: 0;
 }
 
+/* Hide hamburger toggle on desktop */
 #menu-toggle {
-  display: none; /* hide checkbox */
+  display: none;
+}
+
+.menu {
+  display: flex;
+  gap: 60px;
 }
 
 .menu ul {
-  list-style: none;
-  display: flex;           
+  display: flex;
   gap: 60px;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .menu a {
@@ -45,14 +52,52 @@ header {
   color: white;
 }
 
+/* Desktop dropdowns */
+.menu ul li {
+  position: relative;
+}
+
+.menu ul li ul.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  min-width: 150px;
+  padding: 0;
+  margin: 0;
+  border-radius: 6px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  z-index: 999;
+}
+
+.menu ul li:hover > ul.dropdown-content {
+  display: block;
+}
+
+.menu ul li ul.dropdown-content li a {
+  padding: 10px 15px;
+  border: none;
+  border-bottom: 1px solid #C5E898;
+}
+
+.menu ul li ul.dropdown-content li a:hover {
+  background-color: blue;
+  color: white;
+}
+
 /* ---------------- MOBILE ---------------- */
 @media (max-width: 768px) {
   header {
-    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
     padding: 20px;
+  }
+
+  /* Show hamburger */
+  #menu-toggle {
+    display: block;
   }
 
   .hamburger {
@@ -60,41 +105,57 @@ header {
     font-size: 2rem;
     cursor: pointer;
     padding: 10px 20px;
+    background-color: #C5E898;
     border-radius: 8px;
     border: 3px solid #29ADB2;
-    background-color: #C5E898;
+    text-align: right;
   }
 
-  /* Hide menu by default */
-  .menu {
-    display: none;
-    width: 100%;
-    margin-top: 10px;
+  /* Hide dropdown checkboxes on mobile */
+  .dropdown input {
+    display: none !important;
   }
 
-  /* Show menu when hamburger is checked */
-  #menu-toggle:checked + .hamburger + .menu {
+  /* Force dropdown content to be always visible for desktop hover (ignored on mobile) */
+  .dropdown .dropdown-content {
+    max-height: none;
     display: block;
+  }
+
+  /* Collapsed menu */
+  .menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    width: 100%;
+    background-color: #29ADB2;
+    border-radius: 8px;
+  }
+
+  /* Expand menu when hamburger checked */
+  #menu-toggle:checked ~ .menu {
+    max-height: 1000px;
   }
 
   .menu ul {
-    display: block;
-    padding: 0;
+    display: block;   
     margin: 0;
+    padding: 0;
     list-style: none;
   }
 
-  .menu a {
-    display: block;
+  .menu a, .menu label {
     width: 100%;
+    display: block;
     padding: 15px;
+    font-size: 1.2rem;
+    text-align: left;
     color: white;
     background-color: #29ADB2;
     border: none;
-    text-align: left;
   }
 
-  .menu a:hover {
+  .menu a:hover, .menu label:hover {
     background-color: #0766AD;
   }
 }
