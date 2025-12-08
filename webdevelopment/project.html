@@ -30,21 +30,26 @@ Description: This page allows users to learn more about Canva, WeVideo, and Miro
 
   <!-- Navigation Menu -->
   <nav class="menu">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle">Content ▼</a>
-        <ul class="dropdown-content">
-          <li><a href="#canva">Canva</a></li>
-          <li><a href="#wevideo">WeVideo</a></li>
-          <li><a href="#miro">Miro</a></li>
-        </ul>
-      </li>
-      <li><a href="resources.html">Resources</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+
+    <!-- Dropdown menu -->
+    <li>
+      <!-- Hidden checkbox -->
+      <input type="checkbox" id="dropdown-toggle" class="dropdown-toggle-checkbox">
+      <label for="dropdown-toggle" class="dropdown-toggle-label">Content ▼</label>
+      <ul class="dropdown-content">
+        <li><a href="#canva">Canva</a></li>
+        <li><a href="#wevideo">WeVideo</a></li>
+        <li><a href="#miro">Miro</a></li>
+      </ul>
+    </li>
+
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 </header>
 
 <!--Hero Section-->

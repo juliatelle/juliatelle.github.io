@@ -91,85 +91,41 @@ header {
 
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
-  /* Hamburger visible */
-  .hamburger {
-    display: block;
-    font-size: 2rem;
-    cursor: pointer;
-    background-color: #C5E898;
-    padding: 10px 20px;
-    border-radius: 8px;
-    border: 3px solid #29ADB2;
-    z-index: 20;
+  .dropdown-toggle-checkbox {
+    display: none; 
   }
 
-  /* Hide menu by default */
-  .menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #29ADB2;
-    border-radius: 8px;
-    z-index: 10;
-    flex-direction: column;
-  }
-
-  /* Show menu when checkbox checked */
-  #menu-toggle:checked + .hamburger + .menu {
+  .dropdown-toggle-label {
     display: flex;
-  }
-
-  /* Vertical menu items */
-  .menu ul {
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  .menu a {
-    color: white;
-    background-color: #29ADB2;
+    justify-content: space-between;
+    cursor: pointer;
     padding: 15px;
     font-size: 1.2rem;
-    display: block;
-    text-align: left;
+    color: white;
+    background-color: #29ADB2;
     border-radius: 0;
   }
 
-  .menu a:hover {
-    background-color: #0766AD;
-  }
-
-  /* DROPDOWN - Mobile using checkbox */
-  .menu ul li {
-    position: relative;
-  }
-
-  .menu ul li ul {
-    display: none; /* hidden by default */
+  .dropdown-content {
+    display: none;
     flex-direction: column;
     padding-left: 20px;
     background-color: #0766AD;
   }
 
-  /* Show dropdown if checkbox checked */
-  .menu ul li input.dropdown-toggle-checkbox:checked + .dropdown-content {
+  /* Show dropdown with checkbox*/
+  .dropdown-toggle-checkbox:checked + .dropdown-toggle-label + .dropdown-content {
     display: flex;
   }
 
-  /* Remove hover effect on mobile */
-  .menu ul li:hover > ul {
-    display: none;
+  .dropdown-content li a {
+    padding: 10px 15px;
+    color: white;
+    font-size: 1.1rem;
   }
 
-  /* Dropdown toggle label */
-  .dropdown-toggle-label {
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
+  .dropdown-content li a:hover {
+    background-color: #0766AD;
+    color: #C5E898;
   }
 }
-
