@@ -1,6 +1,4 @@
-/* =====================================
-   DESKTOP HEADER
-===================================== */
+/* HEADER */
 header {
   display: flex;
   align-items: center;
@@ -10,6 +8,7 @@ header {
   padding: 30px 50px;
   border-bottom: 3px solid #29ADB2;
   position: relative;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -18,21 +17,24 @@ header {
   flex-shrink: 0;
 }
 
-/* Hide checkbox */
+/* Hide hamburger checkbox */
 #menu-toggle {
   display: none;
 }
 
-/* Hamburger hidden on desktop */
+/* Hamburger default (hidden on desktop) */
 .hamburger {
   display: none;
   font-size: 2.2rem;
   cursor: pointer;
+  background-color: #C5E898;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 3px solid #29ADB2;
+  z-index: 50;
 }
 
-/* =====================================
-   DESKTOP NAVIGATION
-===================================== */
+/* DESKTOP NAVIGATION */
 .menu {
   display: block;
 }
@@ -55,6 +57,7 @@ header {
   border-radius: 10px;
   background-color: white;
   display: block;
+  font-family: "Montserrat", sans-serif;
 }
 
 .menu a:hover {
@@ -62,7 +65,7 @@ header {
   color: white;
 }
 
-/* Dropdown */
+/* DESKTOP DROPDOWN */
 .menu ul li {
   position: relative;
 }
@@ -85,44 +88,37 @@ header {
   display: block;
 }
 
+.menu ul li ul li a {
+  padding: 10px 15px;
+  border-bottom: 1px solid #C5E898;
+}
+
+.menu ul li ul li a:hover {
+  background-color: blue;
+  color: white;
+}
+
 /* MOBILE NAVIGATION */
 @media (max-width: 768px) {
 
-  /* Stack logo + hamburger */
   header {
-    display: flex;
-    flex-direction: column; /* stack vertically */
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    gap: 10px; /* space between logo and hamburger */
-    padding: 20px;
+    gap: 10px;
   }
 
-  .logo {
-    max-width: 200px;
-    height: auto;
-  }
-
-  /* Show hamburger button */
   .hamburger {
     display: block;
-    font-size: 2.2rem;
-    cursor: pointer;
-    background-color: #C5E898;
-    padding: 10px 20px;
-    border-radius: 8px;
-    border: 3px solid #29ADB2;
-    z-index: 50;
+    margin-top: 10px;
   }
 
-  /* Hide menu by default */
   .menu {
-    display: none; /* hidden initially */
+    display: none;
     flex-direction: column;
     width: 100%;
     background-color: #29ADB2;
     position: absolute;
-    top: calc(100% + 10px); /* directly under hamburger */
+    top: calc(100% + 10px); 
     left: 0;
     max-height: 0;
     overflow: hidden;
@@ -130,7 +126,11 @@ header {
     z-index: 40;
   }
 
-  /* Stack menu items vertically */
+  #menu-toggle:checked + .hamburger + .menu {
+    display: flex;
+    max-height: 500px;
+  }
+
   .menu ul {
     display: block;
     padding: 0;
@@ -149,13 +149,6 @@ header {
     background-color: #0766AD;
   }
 
-  /* Show menu when hamburger is checked */
-  #menu-toggle:checked + .hamburger + .menu {
-    display: flex;
-    max-height: 600px;
-  }
-
-  /* Disable dropdowns on mobile */
   .menu ul li ul {
     display: none !important;
   }
