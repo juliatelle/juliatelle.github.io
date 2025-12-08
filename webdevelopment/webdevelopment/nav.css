@@ -1,13 +1,12 @@
-/* ---------------- DESKTOP ---------------- */
+/*  HEADER */
 header {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 150px;
-  padding: 30px 50px;
   background-color: #C5E898;
+  gap:150px;
+  padding: 30px 50px;
   border-bottom: 3px solid #29ADB2;
-  position: relative;
 }
 
 .logo {
@@ -16,22 +15,21 @@ header {
   flex-shrink: 0;
 }
 
-/* Hide hamburger toggle on desktop */
 #menu-toggle {
   display: none;
 }
 
-.menu {
-  display: flex;
-  gap: 60px;
+.hamburger {
+  display: none;
 }
 
+/* MAIN NAVIGATION*/
 .menu ul {
+  list-style: none;
   display: flex;
   gap: 60px;
   margin: 0;
   padding: 0;
-  list-style: none;
 }
 
 .menu a {
@@ -44,6 +42,7 @@ header {
   border-radius: 10px;
   background-color: white;
   display: block;
+  text-align: left;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -52,110 +51,102 @@ header {
   color: white;
 }
 
-/* Desktop dropdowns */
+/* DROPDOWN */
 .menu ul li {
   position: relative;
 }
 
-.menu ul li ul.dropdown-content {
-  display: none;
+.menu ul li ul {
+  display: none;      
   position: absolute;
-  top: 100%;
+  top: 100%;          
   left: 0;
   background-color: white;
-  min-width: 150px;
   padding: 0;
   margin: 0;
+  min-width: 150px;
   border-radius: 6px;
   box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
   z-index: 999;
 }
 
-.menu ul li:hover > ul.dropdown-content {
-  display: block;
-}
-
-.menu ul li ul.dropdown-content li a {
+.menu ul li ul li a {
   padding: 10px 15px;
   border: none;
   border-bottom: 1px solid #C5E898;
 }
 
-.menu ul li ul.dropdown-content li a:hover {
+.menu ul li ul li a:hover {
   background-color: blue;
   color: white;
 }
 
-/* ---------------- MOBILE ---------------- */
+.menu ul li:hover > ul {
+  display: block;
+}
+
+
+/* MOBILE NAVIGATION */
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding: 20px;
-  }
-
-  /* Show hamburger */
-  #menu-toggle {
-    display: block;
-  }
-
   .hamburger {
     display: block;
     font-size: 2rem;
     cursor: pointer;
-    padding: 10px 20px;
     background-color: #C5E898;
+    padding: 10px 20px;
     border-radius: 8px;
     border: 3px solid #29ADB2;
-    text-align: right;
   }
 
-  /* Hide dropdown checkboxes on mobile */
-  .dropdown input {
-    display: none !important;
-  }
-
-  /* Force dropdown content to be always visible for desktop hover (ignored on mobile) */
-  .dropdown .dropdown-content {
-    max-height: none;
-    display: block;
-  }
-
-  /* Collapsed menu */
   .menu {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
+    position: absolute;
+    top: 90px;
+    left: 0;
     width: 100%;
     background-color: #29ADB2;
     border-radius: 8px;
+    overflow: hidden;
   }
 
-  /* Expand menu when hamburger checked */
-  #menu-toggle:checked ~ .menu {
+  #menu-toggle:checked + .menu {
     max-height: 1000px;
   }
 
   .menu ul {
-    display: block;   
+    flex-direction: column;
     margin: 0;
     padding: 0;
     list-style: none;
   }
 
-  .menu a, .menu label {
-    width: 100%;
-    display: block;
-    padding: 15px;
-    font-size: 1.2rem;
-    text-align: left;
+  .menu a {
     color: white;
     background-color: #29ADB2;
     border: none;
+    padding: 15px;
+    font-size: 1.2rem;
+    display: block;
+    text-align: left;
+    font-family: Roboto, sans-serif;
   }
 
-  .menu a:hover, .menu label:hover {
+  .menu a:hover {
     background-color: #0766AD;
+    color: white;
+  }
+
+  .menu ul li ul {
+    display: none;
+    flex-direction: column;
+    background-color: #0766AD;
+    padding-left: 15px;
+  }
+
+  .menu ul li .dropdown-content {
+    display: none;
+  }
+
+  #menu-toggle:checked + .menu ul li .dropdown-content {
+    display: block;
   }
 }
