@@ -13,16 +13,11 @@ header {
 .logo {
   height: 150px;
   width: auto;
-  flex-shrink: 0;
-}
-
-#menu-toggle, .dropdown input {
-  display: none; /* hide all checkboxes */
 }
 
 .menu ul {
   list-style: none;
-  display: flex;           /* Desktop flex row */
+  display: flex; /* horizontal on desktop */
   gap: 60px;
   margin: 0;
   padding: 0;
@@ -62,8 +57,7 @@ header {
   margin: 0;
   min-width: 150px;
   border-radius: 6px;
-  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
-  z-index: 999;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .menu ul li:hover > ul.dropdown-content {
@@ -81,13 +75,14 @@ header {
   color: white;
 }
 
-/* ---------------- MOBILE ---------------- */
+/* Hide all checkboxes */
+#menu-toggle, .dropdown input {
+  display: none;
+}
+
 /* ---------------- MOBILE ---------------- */
 @media (max-width: 768px) {
-
-  /* Header stacked */
   header {
-    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
@@ -107,13 +102,7 @@ header {
     border: 3px solid #29ADB2;
   }
 
-  /* Hide checkboxes */
-  #menu-toggle,
-  .dropdown input {
-    display: none;
-  }
-
-  /* Main menu - collapsed by default */
+  /* Hide menu initially */
   .menu {
     max-height: 0;
     overflow: hidden;
@@ -123,38 +112,34 @@ header {
     border-radius: 8px;
   }
 
-  /* Expand menu when hamburger checked */
-  #menu-toggle:checked + label + .menu {
-    max-height: 1000px; /* plenty for all items */
+  /* Show menu when hamburger is clicked */
+  #menu-toggle:checked ~ .menu {
+    max-height: 1000px;
   }
 
-  /* Menu list vertical */
+  /* Stack menu vertically */
   .menu ul {
     display: block;
     margin: 0;
     padding: 0;
-    list-style: none;
   }
 
-  .menu a,
-  .menu label {
-    width: 100%;
+  .menu a, .menu label {
     display: block;
+    width: 100%;
     padding: 15px;
     font-size: 1.2rem;
     text-align: left;
     color: white;
     background-color: #29ADB2;
     border: none;
-    cursor: pointer;
   }
 
-  .menu a:hover,
-  .menu label:hover {
+  .menu a:hover, .menu label:hover {
     background-color: #0766AD;
   }
 
-  /* Mobile dropdowns */
+  /* Mobile dropdown */
   .menu ul li ul.dropdown-content {
     max-height: 0;
     overflow: hidden;
@@ -166,7 +151,7 @@ header {
     margin-top: 5px;
   }
 
-  /* Expand dropdown when inner checkbox checked */
+  /* Expand dropdown when its checkbox is checked */
   .menu ul li input:checked + label + .dropdown-content {
     max-height: 500px;
   }
