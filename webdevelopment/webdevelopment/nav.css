@@ -87,6 +87,7 @@ header {
 
 /* MOBILE NAVIGATION */
 @media (max-width: 768px) {
+  /* Show hamburger button */
   .hamburger {
     display: block;
     font-size: 2rem;
@@ -97,24 +98,24 @@ header {
     border: 3px solid #29ADB2;
   }
 
+  /* Hide menu by default */
   .menu {
-    display: none; 
+    display: none;
     position: absolute;
-    top: 90px;
+    top: 80px; 
     left: 0;
     width: 100%;
     background-color: #29ADB2;
     border-radius: 8px;
-    overflow: hidden;
     z-index: 1000;
   }
 
-  /* Show menu when hamburger is checked */
-  #menu-toggle:checked ~ .menu {
-    display: flex;
-    flex-direction: column;
+  /* Show menu when hamburger is clicked */
+  #menu-toggle:checked + .hamburger + .menu {
+    display: block;
   }
 
+  /* Vertical menu */
   .menu ul {
     flex-direction: column;
     margin: 0;
@@ -125,7 +126,6 @@ header {
   .menu a {
     color: white;
     background-color: #29ADB2;
-    border: none;
     padding: 15px;
     font-size: 1.2rem;
     display: block;
@@ -136,14 +136,16 @@ header {
     background-color: #0766AD;
   }
 
+  /* Hide dropdowns */
   .menu ul li ul {
     display: none;
     flex-direction: column;
-    background-color: #0766AD;
     padding-left: 15px;
+    background-color: #0766AD;
   }
 
   .menu ul li:hover > ul {
-    display: block; 
+    display: block;
   }
 }
+
