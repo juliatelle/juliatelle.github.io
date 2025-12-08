@@ -1,4 +1,6 @@
-/* HEADER — DESKTOP */
+/* =====================================
+   DESKTOP HEADER
+===================================== */
 header {
   display: flex;
   align-items: center;
@@ -16,17 +18,21 @@ header {
   flex-shrink: 0;
 }
 
+/* Hide checkbox */
 #menu-toggle {
   display: none;
 }
 
+/* Hamburger hidden on desktop */
 .hamburger {
   display: none;
   font-size: 2.2rem;
   cursor: pointer;
 }
 
-/*  DESKTOP NAVIGATION */
+/* =====================================
+   DESKTOP NAVIGATION
+===================================== */
 .menu {
   display: block;
 }
@@ -49,7 +55,6 @@ header {
   border-radius: 10px;
   background-color: white;
   display: block;
-  font-family: "Montserrat", sans-serif;
 }
 
 .menu a:hover {
@@ -57,7 +62,7 @@ header {
   color: white;
 }
 
-/* DESKTOP DROPDOWN */
+/* Dropdown */
 .menu ul li {
   position: relative;
 }
@@ -80,48 +85,47 @@ header {
   display: block;
 }
 
-.menu ul li ul li a {
-  padding: 10px 15px;
-  border-bottom: 1px solid #C5E898;
-}
-
-.menu ul li ul li a:hover {
-  background-color: blue;
-  color: white;
-}
-
-/* MOBILE */
+/* =====================================
+   MOBILE NAVIGATION
+===================================== */
+/* ================= MOBILE NAVIGATION ================= */
 @media (max-width: 768px) {
 
+  /* Stack logo + hamburger */
   header {
-    flex-direction: column;
+    display: flex;
+    flex-direction: column; /* stack vertically */
+    justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 10px; /* space between logo and hamburger */
     padding: 20px;
   }
 
   .logo {
-    max-width: 180px;
+    max-width: 200px;
     height: auto;
   }
 
+  /* Show hamburger button */
   .hamburger {
     display: block;
+    font-size: 2.2rem;
+    cursor: pointer;
     background-color: #C5E898;
     padding: 10px 20px;
     border-radius: 8px;
     border: 3px solid #29ADB2;
-    font-size: 2rem;
     z-index: 50;
   }
 
+  /* Hide menu by default */
   .menu {
-    display: none;
+    display: none; /* hidden initially */
     flex-direction: column;
     width: 100%;
     background-color: #29ADB2;
     position: absolute;
-    top: 100%;
+    top: calc(100% + 10px); /* directly under hamburger */
     left: 0;
     max-height: 0;
     overflow: hidden;
@@ -129,16 +133,11 @@ header {
     z-index: 40;
   }
 
+  /* Stack menu items vertically */
   .menu ul {
     display: block;
     padding: 0;
     margin: 0;
-    list-style: none;
-  }
-
-  #menu-toggle:checked + .hamburger + .menu {
-    display: flex;
-    max-height: 500px;
   }
 
   .menu a {
@@ -146,13 +145,19 @@ header {
     font-size: 1.2rem;
     padding: 15px 20px;
     border-radius: 0;
-    background-color: #29ADB2;
   }
 
   .menu a:hover {
     background-color: #0766AD;
   }
 
+  /* Show menu when hamburger is checked */
+  #menu-toggle:checked + .hamburger + .menu {
+    display: flex;
+    max-height: 600px;
+  }
+
+  /* Disable dropdowns on mobile */
   .menu ul li ul {
     display: none !important;
   }
