@@ -87,66 +87,63 @@ header {
 
 
 /* MOBILE NAVIGATION */
+/* Mobile header layout */
 @media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .header-top {
+    display: flex;
+    flex-direction: column; /* Stack logo above hamburger */
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+  }
+
+  /* Show hamburger */
   .hamburger {
     display: block;
-    font-size: 2rem;
     cursor: pointer;
-    background-color: #C5E898;
-    padding: 10px 20px;
-    border-radius: 8px;
-    border: 3px solid #29ADB2;
+    font-size: 2rem;
   }
 
+  /* Hide menu by default */
   .menu {
-    position: absolute;
-    top: 90px;
-    left: 0;
-    width: 100%;
-    background-color: #29ADB2;
-    border-radius: 8px;
+    max-height: 0;
     overflow: hidden;
+    transition: max-height 0.3s ease;
+    width: 100%;
   }
 
-  #menu-toggle:checked + .menu {
+  /* Show menu when checked */
+  #menu-toggle:checked ~ .menu {
     max-height: 1000px;
   }
 
+  /* Vertical menu links */
   .menu ul {
     flex-direction: column;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    gap: 0;
   }
 
-  .menu a {
-    color: white;
-    background-color: #29ADB2;
-    border: none;
+  .menu ul li a {
     padding: 15px;
-    font-size: 1.2rem;
-    display: block;
-    text-align: left;
-    font-family: Roboto, sans-serif;
+    text-align: center;
   }
 
-  .menu a:hover {
-    background-color: #0766AD;
-    color: white;
-  }
-
-  .menu ul li ul {
-    display: none;
-    flex-direction: column;
-    background-color: #0766AD;
-    padding-left: 15px;
-  }
-
+  /* Dropdowns in mobile */
   .menu ul li .dropdown-content {
     display: none;
+    flex-direction: column;
+    padding-left: 0;
   }
 
-  #menu-toggle:checked + .menu ul li .dropdown-content {
-    display: block;
+  .menu ul li:hover > .dropdown-content,
+  .menu ul li:focus-within > .dropdown-content {
+    display: flex;
   }
 }
