@@ -1,0 +1,175 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: Roboto, sans-serif;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #C5E898;
+  padding: 20px 50px;
+  border-bottom: 3px solid #29ADB2;
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 150px;
+  width: auto;
+  flex-shrink: 0;
+}
+
+/* Hide checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* NAVIGATION */
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 60px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #0766AD;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  border: 3px solid #29ADB2;
+  border-radius: 10px;
+  background-color: white;
+  display: block;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.menu a:hover {
+  background-color: #29ADB2;
+  color: white;
+}
+
+/* Dropdown */
+.menu ul li {
+  position: relative;
+}
+
+.menu ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  padding: 0;
+  margin: 0;
+  min-width: 150px;
+  border-radius: 6px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  z-index: 999;
+}
+
+.menu ul li ul li a {
+  padding: 10px 15px;
+  border: none;
+  border-bottom: 1px solid #C5E898;
+}
+
+.menu ul li ul li a:hover {
+  background-color: blue;
+  color: white;
+}
+
+.menu ul li:hover > ul {
+  display: block;
+}
+
+/* MOBILE NAVIGATION*/
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  /* Hide menu*/
+  .menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    width: 100%;
+  }
+
+  /* Show menu with checkbox*/
+  #menu-toggle:checked ~ .menu {
+    max-height: 1000px;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+
+  .menu ul li a {
+    display: block;
+    padding: 15px;
+    text-align: center;
+    border: none;
+    background-color: #29ADB2;
+    color: white;
+    font-size: 1.3rem;
+  }
+
+  .menu ul li a:hover {
+    background-color: #0766AD;
+  }
+
+  /* Dropdowns */
+  .menu ul li .dropdown-content {
+    display: none;
+    flex-direction: column;
+    background-color: #0766AD;
+    padding-left: 0;
+  }
+
+  .menu ul li:focus-within > .dropdown-content,
+  .menu ul li:hover > .dropdown-content {
+    display: flex;
+  }
+
+  .menu ul li .dropdown-content li a {
+    background-color: #0766AD;
+    color: white;
+    font-size: 1.2rem;
+  }
+
+  .menu ul li .dropdown-content li a:hover {
+    background-color: #29ADB2;
+  }
+}
