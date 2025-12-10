@@ -1,0 +1,54 @@
+<!--
+Name: Julia Telle
+Date: 10/19
+Page: Resources
+Description: This page allows users to check my sources and learn more about the topics of the site.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resources</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="nav.css">
+<!--Custom font-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<?php include 'header.html'; ?>
+
+<main>
+<!--Hero-->
+<section class="hero resources-hero">
+<h1>Resources</h1>
+</section>
+
+<!--Site Explanation-->
+<section>
+<h2>Site Overview</h2>
+<p>The purpose of this website is to support secondary educators in integrating student-centered digital resources into their classrooms. The site showcases tools
+that help teachers make learning more engaging, authentic, and transferrable for students. This way, educators can expand the variety of assignments and activities
+in their curriculum that promote creativity and opportunities to develop digital literacy skills.</p>
+</section>
+
+
+<!--Sources-->
+<section>
+<h2>I used the following resources to create content for this website:</h2>
+<p>Anas, I. (2019). Behind the Scene: Student-Created Video as a Meaning-Making Process to Promote Student Active Learning. <i>Teaching English with Technology, 19</i>(4), 37–56. <a href="https://files.eric.ed.gov/fulltext/EJ1233488.pdf" target="_blank">https://files.eric.ed.gov/fulltext/EJ1233488.pdf</a></p>
+<p>Best 10 Free Education Templates & Examples: Miro. (n.d.). <a href="https://miro.com/templates/education/" target="_blank">https://miro.com/templates/education/</a></p>
+<p>Bobek, E., & Tversky, B. (2016). Creating visual explanations improves learning. <i>Cognitive Research: Principles and Implications.</i> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5256450/" target="_blank">https://pmc.ncbi.nlm.nih.gov/articles/PMC5256450/</a></p>
+<p>Canva. (2024). <i>Canva Essentials: Introduction.</i> YouTube. <a href="https://www.youtube.com/watch?v=rx5zGQQPRr4&list=PLATYfhN6gQz9WW7SGO8WyM55BI3DqnGLd" target="_blank">https://www.youtube.com/watch?v=rx5zGQQPRr4</a></p>
+<p>Girolimon, M. (2024, January 4). The value of discussion boards in online learning. <i>Southern New Hampshire University.</i> <a href="https://www.snhu.edu/about-us/newsroom/education/value-of-discussion-boards" target="_blank">https://www.snhu.edu/about-us/newsroom/education/value-of-discussion-boards</a></p>
+<p>Guide Nation. (2025). <i>WeVideo Tutorial for Beginners 2025: Best Online Video Editor Step-by-Step Guide.</i> YouTube. <a href="https://www.youtube.com/watch?v=ZVKQVko2saM" target="_blank">https://www.youtube.com/watch?v=ZVKQVko2saM</a></p>
+<p>Kevin Stravert. (2025). <i>Miro Tutorial (2025).</i> YouTube. <a href="https://www.youtube.com/watch?v=PxX26roMmdA" target="_blank">https://www.youtube.com/watch?v=PxX26roMmdA</a></p>
+<p>Prothero, A. (2023, July 11). <i>What podcasts did for student engagement in these schools.</i> Education Week. <a href="https://www.edweek.org/technology/what-podcasts-did-for-student-engagement-in-these-schools/2023/07" target="_blank">https://www.edweek.org/technology/what-podcasts-did-for-student-engagement-in-these-schools/2023/07</a></p>
+<p><i>Video projects for educators - free assignment ideas.</i> WeVideo. (n.d.). <a href="https://www.wevideo.com/education/video-projects" target="_blank">https://www.wevideo.com/education/video-projects</a></p>
+</section>
+</main>
+
+<?php include 'footer.html'; ?>

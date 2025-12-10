@@ -75,26 +75,21 @@ blockquote {
   padding: 100px 20px;
 }
 
-
 .index-hero {
-  background-image: url('hero.jpg.jpg');
+  background-image: url('hero.jpg');
 }
-
 
 .about-hero {
-  background-image: url('about.jpg.jpg')
+  background-image: url('about.jpg');
 }
 
-
-.Resources-hero {
-  background-image: url('resources.jpg.jpg');
+.resources-hero {
+  background-image: url('resources.jpg');
 }
-
 
 .project-hero {
-  background-image: url('content.jpg')
+  background-image: url('content.jpg');
 }
-
 
 .hero h1 {
   font-size: 75px;
@@ -105,7 +100,6 @@ blockquote {
   font-style: normal;
 }
 
-
 .hero h2 {
 font-size: 50px;
   margin-bottom: 15px;
@@ -115,7 +109,6 @@ font-size: 50px;
   font-style: normal;
 }
 
-
 .hero p {
   font-family: "Lexend", sans-serif;
   font-weight: 300;
@@ -124,7 +117,6 @@ font-size: 50px;
   margin-bottom: 10px;
   color: #29ADB2;
 }
-
 
 .hero-btn {
   display: inline-block;          
@@ -137,7 +129,6 @@ font-size: 50px;
   border-radius: 25px;                
   box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
-
 
 .hero-btn:hover {
   background-color: #0766AD;

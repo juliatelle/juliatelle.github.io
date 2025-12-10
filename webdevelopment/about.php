@@ -1,0 +1,102 @@
+<!--
+Name: Julia Telle
+Date: 9/21
+Page: About
+Description: This page allows users to learn more about my professional history.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="nav.css">
+<!--Custom font-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<?php include 'header.html'; ?>
+
+<!--Hero-->
+<section class="hero about-hero">
+<h1>Meet Julia</h1>
+<h2>Learning Technologies & Design Graduate Student |</h2>
+<h2>Middle & High School Educator</h2>
+</section>
+
+
+<main class="about-container">
+<div class="about-grid">
+<section class="bio">
+<h2>About Me</h2>
+<p>Hello! My name is Julia Telle. I am a Learning Technologies and Design graduate student with an emphasis in Technology in Schools. I previously attended
+Missouri State University and graduated in 2019 with my BS.Ed in Secondary English Education. I live in St. Louis, Missouri and just began my seventh year
+as an eighth grade language arts teacher. I eventually hope to work in the K-12 setting as an instructional technology specialist.</p>
+
+
+<p>In this course, I hope to learn basic terminology and procedures related to web development. I believe this foundational knowledge is beneficial for a
+variety of work and educational environments. I also hope to apply what I learn from this course to my future capstone portfolio.</p>
+
+
+<p>When not studying or teaching, I love to read, watch sports, and go on hikes with my husband and our chocolate lab, Heinz. I also love to run and am currently
+training for my first half marathon!</p>
+</section>
+
+
+<!--Media (headshot, video, download button)-->
+<section class="media">
+<h2>Learn More</h2>
+<img src="headshot.jpg" alt="Julia's headshot" class="profile-image">
+<video controls class="resume-video">
+<source src="resumevid.mp4" type="video/mp4">
+Your browser does not support the video tag.</video>
+<!--Resume-->
+<a href="resume.pdf" class="resume-link" target="_blank">Download My Resume!</a>
+</section>
+</div>
+
+
+<!-- Education-->
+<section class="education">
+<h2>Education</h2>
+<figure>
+<figcaption>My Educational History</figcaption>
+<table class="edu-table">
+<thead>
+<tr>
+<th>Degree</th>
+<th>Institution</th>
+<th>Years</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>M.S. Learning Technologies & Design</th>
+<td>University of Missouri</td>
+<td>Expected Dec 2026</td>
+<td>Emphasis in Technology in Schools</td>
+</tr>
+<tr>
+<th>M.Ed Educational, School & Counseling Psychology</th>
+<td>University of Missouri</td>
+<td>Aug 2020–May 2023</td>
+<td>K–12 Licensed School Counselor</td>
+</tr>
+<tr>
+<th>BS.Ed Secondary English Education</th>
+<td>Missouri State University</td>
+<td>Aug 2015–May 2019</td>
+<td>Certified 5–12 English educator</td>
+</tr>
+</tbody>
+</table>
+</figure>
+</section>
+</main>
+
+<?php include 'footer.html'; ?>
